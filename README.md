@@ -16,7 +16,7 @@
 
 <div align="center">
 
- ![USS PROMETHEUS Banner]([https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6](https://github.com/jirka22med/uss-promethes-gemini-app-2/blob/e5d8c3f2f3ca4eb756eb90377736751aed37c37e/image.png))
+ ![USS PROMETHEUS Banner](https://raw.githubusercontent.com/jirka22med/uss-promethes-gemini-app-2/e5d8c3f2f3ca4eb756eb90377736751aed37c37e/image.png)
 
 **Pokročilý AI chatbot s vojenským rozhraním inspirovaným Star Trek**
 
