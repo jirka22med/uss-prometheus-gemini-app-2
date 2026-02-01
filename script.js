@@ -522,14 +522,25 @@ function updateFilePreview() {
     });
 }
 
-function getFileIcon(mimeType) {
+/*function getFileIcon(mimeType) {
     if (mimeType.includes('pdf')) return '📄';
     if (mimeType.includes('text')) return '📝';
     if (mimeType.includes('json')) return '📋';
     if (mimeType.includes('javascript') || mimeType.includes('python')) return '⚙️';
     if (mimeType.includes('html')) return '🌐';
     return '📎';
+}*/
+
+function getFileIcon(mimeType) {
+    if (mimeType.includes('pdf')) return '📄';
+    if (mimeType.includes('text')) return '📝';
+    if (mimeType.includes('json')) return '📋';
+    if (mimeType.includes('audio') || mimeType.includes('mpeg')) return '🎵';
+    if (mimeType.includes('javascript') || mimeType.includes('python')) return '⚙️';
+    if (mimeType.includes('html')) return '🌐';
+    return '📎';
 }
+
 
 function removeFile(index) {
     currentAttachments.splice(index, 1);
