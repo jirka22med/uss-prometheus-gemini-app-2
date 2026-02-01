@@ -500,7 +500,7 @@ function updateFilePreview() {
         } else {
             const icon = document.createElement('div');
             icon.className = 'file-icon';
-            icon.textContent = getFileIcon(file.mimeType);
+            icon.textContent = getFileIcon(file.mimeType, file.name);
             item.appendChild(icon);
         }
         
@@ -557,8 +557,37 @@ function updateFilePreview() {
     return '📎';  
 } */
 //=======================================\\
-function getFileIcon(mimeType) {
-    console.log("🔍 Diagnostika - detekovaný MIME typ:", mimeType);
+function getFileIcon(mimeType, fileName = '') {
+    console.log("🔍 Diagnostika - MIME:", mimeType, "| Soubor:", fileName);
+    
+    // ═══════════════════════════════════════════════════════════
+    // FALLBACK: Detekce podle přípony souboru (když MIME selže)
+    // ═══════════════════════════════════════════════════════════
+    if (fileName) {
+        const ext = fileName.split('.').pop().toLowerCase();
+        
+        // Python
+        if (ext === 'py' || ext === 'pyw') return '🔧'; // ✅ Nová ikona pro Python
+        
+        // Markdown
+        if (ext === 'md' || ext === 'markdown') return '📄'; // ✅ Nová ikona pro Markdown
+        
+        // Další přípony
+        if (ext === 'js') return '⚙️';
+        if (ext === 'html' || ext === 'htm') return '🌐';
+        if (ext === 'css') return '🎨';
+        if (ext === 'json') return '📋';
+        if (ext === 'mp3' || ext === 'wav' || ext === 'ogg') return '🎵';
+        if (ext === 'mp4' || ext === 'avi' || ext === 'mkv') return '🎬';
+        if (ext === 'png' || ext === 'jpg' || ext === 'jpeg' || ext === 'gif') return '🖼️';
+        if (ext === 'pdf') return '📄';
+        if (ext === 'txt') return '📝';
+        if (ext === 'zip' || ext === 'rar' || ext === '7z') return '📦';
+    }
+    
+    // ═══════════════════════════════════════════════════════════
+    // PRIMÁRNÍ: Detekce podle MIME typu
+    // ═══════════════════════════════════════════════════════════
     
     // Dokumenty
     if (mimeType.includes('pdf')) return '📄';
@@ -568,14 +597,14 @@ function getFileIcon(mimeType) {
     
     // Text & Data
     if (mimeType.includes('text/plain')) return '📝';
+    if (mimeType.includes('markdown')) return '📄';
     if (mimeType.includes('json')) return '📋';
     if (mimeType.includes('xml')) return '📋';
     if (mimeType.includes('csv')) return '📊';
-    if (mimeType.includes('markdown')) return '📝';
     
     // Kód
-    if (mimeType.includes('javascript') || mimeType.includes('js')) return '⚙️';
-    if (mimeType.includes('python') || mimeType.includes('py')) return '🐍';
+    if (mimeType.includes('javascript')) return '⚙️';
+    if (mimeType.includes('python')) return '🔧';
     if (mimeType.includes('html')) return '🌐';
     if (mimeType.includes('css')) return '🎨';
     if (mimeType.includes('java')) return '☕';
@@ -594,6 +623,7 @@ function getFileIcon(mimeType) {
     
     // Default
     return '📎';
+}
 }
 //=======================================\\
 
