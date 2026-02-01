@@ -522,6 +522,7 @@ function updateFilePreview() {
     });
 }
 
+//=====původní logika========\\
 /*function getFileIcon(mimeType) {
     if (mimeType.includes('pdf')) return '📄';
     if (mimeType.includes('text')) return '📝';
@@ -531,7 +532,8 @@ function updateFilePreview() {
     return '📎';
 }*/
 
-function getFileIcon(mimeType) {
+//======upravená logika 1 =========\\
+/*function getFileIcon(mimeType) {
     if (mimeType.includes('pdf')) return '📄';
     if (mimeType.includes('text')) return '📝';
     if (mimeType.includes('json')) return '📋';
@@ -539,8 +541,22 @@ function getFileIcon(mimeType) {
     if (mimeType.includes('javascript') || mimeType.includes('python')) return '⚙️';
     if (mimeType.includes('html')) return '🌐';
     return '📎';
-}
+}*/
 
+//=========aktualizovaná logika a přidan console.log========\\
+function getFileIcon(mimeType) {
+    console.log("Diagnostika systému - detekovaný MIME typ:", mimeType);
+    
+    if (mimeType.includes('pdf')) return '📄';
+    if (mimeType.includes('text')) return '📝';
+    if (mimeType.includes('json')) return '📋';
+    if (mimeType.includes('audio') || mimeType.includes('mpeg')) return '🎵';
+    if (mimeType.includes('javascript') || mimeType.includes('python')) return '⚙️';
+    if (mimeType.includes('html')) return '🌐';
+    
+    return '📎';
+}
+//=======================================\\
 
 function removeFile(index) {
     currentAttachments.splice(index, 1);
