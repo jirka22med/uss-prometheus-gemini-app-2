@@ -431,6 +431,7 @@ export function checkSerpAPIConfig() {
         vessel: "USS PROMETHEUS",
         module_version: "4.2 DEEP SPACE SCANNER",
         combat_ready: key ? "YES" : "NO",
+        configured: key && key.length > 20 ? true : false,  // ✅ NOVÁ PROPERTY pro script.js
         sector: isGitHub ? "GITHUB_PAGES (Hostile Environment)" : "LOCALHOST (Safe Harbor)",
         active_proxies: TACTICAL_PROXY_GRID.filter(node => node !== undefined).length, // Počítáme jen aktivní
         redundancy_level: "OPTIMIZED",
