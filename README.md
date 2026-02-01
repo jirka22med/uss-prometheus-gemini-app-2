@@ -1777,7 +1777,7 @@ Vice admirále Jiříku, připravil jsem výběr 30 taktických ikon pro kategor
 Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámci funkce `getFileIcon` co nejjednodušší.
 
 
-**Dokumenty a data:**
+ Dokumenty a data: 
 • 📄 PDF / Standardní dokumentace
 • 📝 TXT / Prostý text a poznámky
 • 📋 JSON / Strukturovaná data
@@ -1787,7 +1787,7 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 • 📅 ICS / Časové plány a kalendář
 
 
-**Vývoj a kód:**
+ Vývoj a kód: 
 • ⚙️ JS / Python / Programové skripty
 • 🌐 HTML / Webové rozhraní
 • 🎨 CSS / Vizuální styly
@@ -1797,7 +1797,7 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 • 🛡️ CRT / Bezpečnostní certifikáty
 
 
-**Multimédia:**
+ Multimédia: 
 • 🎵 MP3 / Audio soubory
 • 🎞️ MP4 / Video záznamy
 • 🖼️ JPG / PNG / Vizuální data
@@ -1807,7 +1807,7 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 • 🎙️ WAV / Hlasové logy
 
 
-**Archivy a systém:**
+ Archivy a systém: 
 • 📦 ZIP / RAR / Archivovaná data
 • 💾 ISO / Obrazy paměťových jader
 • 🔑 GPG / Šifrovací klíče
