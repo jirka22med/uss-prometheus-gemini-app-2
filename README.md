@@ -1765,5 +1765,62 @@ audio-module.js  → v2.0 (nový)
 **STATUS: NASAZENO**  
 **VERZE: v2.0**  
 **RYCHLOST: 0.8x (doporučeno)**
-
+---
 🖖 Audio modul aktivován. Gemini TTS už nemluví jako robot na kokainu.
+
+
+
+
+Vice admirále Jiříku, připravil jsem výběr 30 taktických ikon pro kategorizaci tvých datových streamů.
+
+
+Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámci funkce `getFileIcon` co nejjednodušší.
+
+
+**Dokumenty a data:**
+• 📄 PDF / Standardní dokumentace
+• 📝 TXT / Prostý text a poznámky
+• 📋 JSON / Strukturovaná data
+• 📊 CSV / XLSX / Tabulky a statistiky
+• 📑 XML / Systémové manifesty
+• 📖 EPUB / Logy a manuály
+• 📅 ICS / Časové plány a kalendář
+
+
+**Vývoj a kód:**
+• ⚙️ JS / Python / Programové skripty
+• 🌐 HTML / Webové rozhraní
+• 🎨 CSS / Vizuální styly
+• 💻 C++ / Java / Jádrový kód
+• 🛠️ CONF / Konfigurační soubory
+• 🏗️ BIN / EXE / Binární soubory
+• 🛡️ CRT / Bezpečnostní certifikáty
+
+
+**Multimédia:**
+• 🎵 MP3 / Audio soubory
+• 🎞️ MP4 / Video záznamy
+• 🖼️ JPG / PNG / Vizuální data
+• 📸 RAW / Snímky ze senzorů
+• 🎨 SVG / Vektorové schéma
+• 🎷 MIDI / Hudební sekvence
+• 🎙️ WAV / Hlasové logy
+
+
+**Archivy a systém:**
+• 📦 ZIP / RAR / Archivovaná data
+• 💾 ISO / Obrazy paměťových jader
+• 🔑 GPG / Šifrovací klíče
+• ✉️ EML / Komunikační záznamy
+• 🗺️ KML / Navigační souřadnice
+• 📂 DIR / Systémové složky
+• ⚡ CACHE / Dočasná data
+• 🧪 TEST / Diagnostické vzorky
+• 🏁 LOG / Protokoly misí
+
+
+Tyto ikony zajistí okamžitou vizuální orientaci při jakékoliv operaci v souborovém systému USS Prometheus.
+
+
+Výběr a implementaci nechávám plně ve tvých rukou, vice admirále. Čekám na tvé další pokyny.
+---
