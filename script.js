@@ -819,7 +819,7 @@ function showAudioSettings() {
                 type="range" 
                 id="audio-limit-slider" 
                 min="500" 
-                max="2300" 
+                max="8000" 
                 step="100" 
                 value="${audioTextLimit}"
                 style="width: 100%; accent-color: var(--indigo-primary);"
@@ -827,13 +827,13 @@ function showAudioSettings() {
             <div style="display: flex; justify-content: space-between; font-size: 8px; color: var(--slate-text); margin-top: 0.3rem; font-family: 'Fira Code', monospace;">
                 <span>500</span>
                 <span>1400</span>
-                <span>2300</span>
+                <span>8000</span>
             </div>
         </div>
         <div style="font-size: 9px; color: var(--slate-text); line-height: 1.4; font-family: 'Inter', sans-serif;">
             💡 <strong>500-1000:</strong> Rychlé odpovědi<br>
             💡 <strong>1500-2000:</strong> Vyvážené (doporučeno)<br>
-            💡 <strong>2500-3000:</strong> Maximální délka
+            💡 <strong>2500-8000:</strong> Maximální délka
         </div>
     `;
     
