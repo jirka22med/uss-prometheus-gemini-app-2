@@ -624,7 +624,7 @@ function getFileIcon(mimeType, fileName = '') {
     // Default
     return '📎';
 }
-}
+ 
 //=======================================\\
 
 
