@@ -1765,7 +1765,7 @@ audio-module.js  → v2.0 (nový)
 **STATUS: NASAZENO**  
 **VERZE: v2.0**  
 **RYCHLOST: 0.8x (doporučeno)**
----
+ 
 🖖 Audio modul aktivován. Gemini TTS už nemluví jako robot na kokainu.
 
 
@@ -1823,4 +1823,4 @@ Tyto ikony zajistí okamžitou vizuální orientaci při jakékoliv operaci v so
 
 
 Výběr a implementaci nechávám plně ve tvých rukou, vice admirále. Čekám na tvé další pokyny.
----
+ 
