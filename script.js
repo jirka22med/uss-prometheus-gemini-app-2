@@ -558,15 +558,41 @@ function updateFilePreview() {
 } */
 //=======================================\\
 function getFileIcon(mimeType) {
-    console.log("Diagnostika systému - detekovaný MIME typ:", mimeType);
+    console.log("🔍 Diagnostika - detekovaný MIME typ:", mimeType);
     
+    // Dokumenty
     if (mimeType.includes('pdf')) return '📄';
-    if (mimeType.includes('text')) return '📝';
+    if (mimeType.includes('word') || mimeType.includes('docx') || mimeType.includes('doc')) return '📝';
+    if (mimeType.includes('excel') || mimeType.includes('xlsx') || mimeType.includes('xls') || mimeType.includes('spreadsheet')) return '📊';
+    if (mimeType.includes('powerpoint') || mimeType.includes('pptx') || mimeType.includes('presentation')) return '📽️';
+    
+    // Text & Data
+    if (mimeType.includes('text/plain')) return '📝';
     if (mimeType.includes('json')) return '📋';
-    if (mimeType.includes('audio') || mimeType.includes('mpeg')) return '🎵';
-    if (mimeType.includes('javascript') || mimeType.includes('python')) return '⚙️';
+    if (mimeType.includes('xml')) return '📋';
+    if (mimeType.includes('csv')) return '📊';
+    if (mimeType.includes('markdown')) return '📝';
+    
+    // Kód
+    if (mimeType.includes('javascript') || mimeType.includes('js')) return '⚙️';
+    if (mimeType.includes('python') || mimeType.includes('py')) return '🐍';
     if (mimeType.includes('html')) return '🌐';
     if (mimeType.includes('css')) return '🎨';
+    if (mimeType.includes('java')) return '☕';
+    if (mimeType.includes('cpp') || mimeType.includes('c++')) return '⚡';
+    if (mimeType.includes('php')) return '🐘';
+    if (mimeType.includes('ruby')) return '💎';
+    if (mimeType.includes('shell') || mimeType.includes('bash')) return '🖥️';
+    
+    // Média
+    if (mimeType.includes('audio') || mimeType.includes('mpeg') || mimeType.includes('mp3') || mimeType.includes('wav')) return '🎵';
+    if (mimeType.includes('video') || mimeType.includes('mp4') || mimeType.includes('avi')) return '🎬';
+    if (mimeType.includes('image') || mimeType.includes('png') || mimeType.includes('jpg') || mimeType.includes('jpeg') || mimeType.includes('gif')) return '🖼️';
+    
+    // Archivy
+    if (mimeType.includes('zip') || mimeType.includes('rar') || mimeType.includes('7z') || mimeType.includes('tar') || mimeType.includes('gz')) return '📦';
+    
+    // Default
     return '📎';
 }
 //=======================================\\
