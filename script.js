@@ -566,7 +566,7 @@ function getFileIcon(mimeType) {
     if (mimeType.includes('audio') || mimeType.includes('mpeg')) return '🎵';
     if (mimeType.includes('javascript') || mimeType.includes('python')) return '⚙️';
     if (mimeType.includes('html')) return '🌐';
-    if (mimeType.includes('CSS')) return '🎨';
+    if (mimeType.includes('css')) return '🎨';
     return '📎';
 }
 //=======================================\\
