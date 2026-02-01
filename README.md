@@ -1778,6 +1778,7 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 
 
 ### Dokumenty a data: ###
+```
 • 📄 PDF / Standardní dokumentace
 • 📝 TXT / Prostý text a poznámky
 • 📋 JSON / Strukturovaná data
@@ -1785,9 +1786,10 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 • 📑 XML / Systémové manifesty
 • 📖 EPUB / Logy a manuály
 • 📅 ICS / Časové plány a kalendář
-
-
+```
+ 
 ### Vývoj a kód: ###
+```
 • ⚙️ JS / Python / Programové skripty
 • 🌐 HTML / Webové rozhraní
 • 🎨 CSS / Vizuální styly
@@ -1795,9 +1797,10 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 • 🛠️ CONF / Konfigurační soubory
 • 🏗️ BIN / EXE / Binární soubory
 • 🛡️ CRT / Bezpečnostní certifikáty
-
-
+```
+ 
 ### Multimédia: ###
+```
 • 🎵 MP3 / Audio soubory
 • 🎞️ MP4 / Video záznamy
 • 🖼️ JPG / PNG / Vizuální data
@@ -1805,9 +1808,10 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 • 🎨 SVG / Vektorové schéma
 • 🎷 MIDI / Hudební sekvence
 • 🎙️ WAV / Hlasové logy
-
+```
 
 ### Archivy a systém: ###
+```
 • 📦 ZIP / RAR / Archivovaná data
 • 💾 ISO / Obrazy paměťových jader
 • 🔑 GPG / Šifrovací klíče
@@ -1817,7 +1821,7 @@ Tento seznam je rozdělen podle funkčních skupin, aby byla tvoje volba v rámc
 • ⚡ CACHE / Dočasná data
 • 🧪 TEST / Diagnostické vzorky
 • 🏁 LOG / Protokoly misí
-
+```
 
 Tyto ikony zajistí okamžitou vizuální orientaci při jakékoliv operaci v souborovém systému USS Prometheus.
 
