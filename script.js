@@ -554,8 +554,8 @@ function updateFilePreview() {
     if (mimeType.includes('javascript') || mimeType.includes('python')) return '⚙️';
     if (mimeType.includes('html')) return '🌐';
     
-    return '📎'; */
-}
+    return '📎';  
+} */
 //=======================================\\
 function getFileIcon(mimeType) {
     console.log("Diagnostika systému - detekovaný MIME typ:", mimeType);
