@@ -257,8 +257,29 @@ window.prometheusHelp = () => {
     console.log('%c🗑️ ÚDRŽBA:', 'color: #10b981; font-weight: bold;');
     console.log('  prometheusReset()          - Vymaž všechna data');
     console.log('');
-    console.log('%c🎨 EXTRA:', 'color: #10b981; font-weight: bold;');
-    console.log('  setTheme("#ff00ff")        - Změň barvy UI');
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+ console.log('%c🎨 EXTRA:', 'color: #10b981; font-weight: bold;');
+ console.log('  setTheme("#ff00ff")        - Změň barvy UI');
+ console.log('  setTheme("#007bff")        - Změň barvy UI > Hvězdná flotila - Klasická modrá');
+ console.log('  setTheme("#dc3545")        - Změň barvy UI > Klingonská - Agresivní červená');
+ console.log('  setTheme("#28a745")        - Změň barvy UI > Borgská/Romulanská - Hluboká zelená');
+ console.log('  setTheme("#6c757d")        - Změň barvy UI > Vulcan - Neutrální šedá');
+ console.log('  setTheme("#ffc107")        - Změň barvy UI > Ferengijská - Bohatá zlatá');
+ console.log('  setTheme("#17a2b8")        - Změň barvy UI > Romulanská Tmavá - Tyrkysová modrá');
+ console.log('  setTheme("#00bcd4")        - Změň barvy UI > Andorianská - Světlejší tyrkysová');
+ console.log('  setTheme("#0d6efd")        - Změň barvy UI > Kobaltová - Jasná modrá');
+ console.log('  setTheme("#6f42c1")        - Změň barvy UI > Deep Space Fialová - Mysteriózní fialová');
+ console.log('  setTheme("#fd7e14")        - Změň barvy UI > Energetická - Jasná oranžová');
+ console.log('  setTheme("#6610f2")        - Změň barvy UI > Bajoranská - Tmavě fialová');
+ console.log('  setTheme("#e83e8c")        - Změň barvy UI > Borgská Růžová - Neočekávaná magenta');
+ console.log('  setTheme("#20c997")        - Změň barvy UI > Botanická Zelená - Jasná mentolová');
+ console.log('  setTheme("#dee2e6")        - Změň barvy UI > Holografická Šedá - Světlá, futuristická šedá');
+ console.log('  setTheme("#f8f9fa")        - Změň barvy UI > Flotilní Bílá - Čistá, minimalistická bílá');
+ console.log('  setTheme("#343a40")        - Změň barvy UI > Tmavá Komunikační - Jemná tmavě šedá');
+ console.log('  setTheme("#cc00cc")        - Změň barvy UI > Transwarp Magenta - Zářivá fialová');
+ console.log('  setTheme("#00cc66")        - Změň barvy UI > Životní Podpora - Světlá zelená');
+ console.log('  setTheme("#ff6600")        - Změň barvy UI > Výstražná Oranžová - Intenzivní oranžová');
+ console.log('  setTheme("#4a4a4a")        - Změň barvy UI > U.S.S. Defiant - Tmavá, odolná šedá');
     console.log('');
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log('%c💡 TIP: Tento modul běží v synchronizaci s rokem 2026.', 'color: #f59e0b;');
@@ -269,3 +290,4 @@ console.log('%c✅ USS PROMETHEUS DevTools v1.1 LOADED', 'color: #10b981; font-w
 console.log('%c💡 Zavolej prometheusHelp() pro seznam příkazů', 'color: #6366f1;');
 
 console.log('%c💡 Zavolej prometheusTest(); Spusť diagnostiku', 'color: #6366f1;');
+
