@@ -1,0 +1,1016 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   🚀 USS PROMETHEUS - MULTIMEDIA RESPONSIVE CSS v1.0
+   CHIEF ARCHITECT: Vice Admirál Jiřík + Admirál Claude
+   ÚČEL: Univerzální responsivita pro VŠECHNY velikosti obrazovek
+   STATUS: PRODUCTION READY / KOMPLETNÍ COVERAGE
+   
+   ═══════════════════════════════════════════════════════════════════════════
+   🔵 GLOBÁLNÍ ÚPRAVA: PULSE-BAR VLEVO VEDLE USS PROMETHEUS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Přesun pulse-bar na LEVOU stranu názvu */
+.ship-id {
+    flex-direction: row-reverse !important;
+    gap: 1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   📐 RESPONSIVE BREAKPOINTY - ZAČÁTEK
+   
+   📐 BREAKPOINTY:
+   - 📱 Mobile Portrait:     320px - 480px
+   - 📱 Mobile Landscape:    481px - 767px
+   - 📱 Tablet Portrait:     768px - 1024px
+   - 💻 Tablet Landscape:    1025px - 1279px
+   - 💻 Desktop Small:       1280px - 1439px
+   - 🖥️ Desktop Medium:      1440px - 1919px
+   - 🖥️ Desktop Large (2K):  1920px - 2559px
+   - 🖥️ Ultra Wide (4K+):    2560px+
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────────────────────────
+   📱 MOBILE PORTRAIT (320px - 480px)
+   Ultra kompaktní režim - vertikální orientace
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (max-width: 480px) {
+    
+    /* ─── HLAVNÍ CONTAINER ─── */
+    .app-container {
+        flex-direction: column;
+    }
+    
+    /* ─── CHAT SIDEBAR ─── */
+    .chat-sidebar {
+        width: 100% !important;
+        min-height: 100vh;
+    }
+    
+    /* ─── TACTICAL HEADER ─── */
+    .tactical-header {
+        height: auto;
+        padding: 0.75rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .ship-id h1 {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+    }
+    
+    .ship-id p {
+        font-size: 8px;
+    }
+    
+    .pulse-bar {
+        width: 3px;
+        height: 25px;
+    }
+    
+    /* ─── HEADER CONTROLS ─── */
+    .header-controls {
+        gap: 0.2rem;  /* Menší mezery mezi tlačítky */
+    }
+    
+    .btn-iconic {
+        padding: 0.3rem 0.5rem;  /* Kompaktnější padding */
+        font-size: 7px;          /* Menší font */
+        gap: 0.2rem;             /* Menší mezera mezi ikonkou a textem */
+    }
+    
+    .btn-iconic span {
+        white-space: nowrap;     /* Zabráníme zalamování textu */
+    }
+    
+    .bridge-select {
+        font-size: 9px;
+        padding: 0.35rem 0.5rem;
+        min-width: 90px;         /* Minimální šířka pro čitelnost */
+    }
+    
+    #jirik-manual-opener-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+        padding: 0.2rem;
+    }
+    
+    .status-dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    /* ─── CHAT MESSAGES ─── */
+    .message-display {
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+    }
+    
+    .msg-wrapper {
+        max-width: 95%;
+    }
+    
+    .bubble {
+        padding: 0.8rem 1rem;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    .msg-label {
+        font-size: 8px;
+        margin-bottom: 6px;
+    }
+    
+    /* ─── FILE PREVIEW ─── */
+    .file-preview-multi {
+        padding: 0.5rem;
+    }
+    
+    .file-preview-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .file-card {
+        padding: 0.6rem;
+    }
+    
+    .file-card-name {
+        font-size: 9px;
+    }
+    
+    .file-card-size {
+        font-size: 8px;
+    }
+    
+    /* ─── SHIP STATS ─── */
+    .ship-stats {
+        height: auto;
+        padding: 0.5rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        font-size: 9px;
+    }
+    
+    /* ─── INPUT AREA ─── */
+    .input-area {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .bridge-form {
+        gap: 0.5rem;
+    }
+    
+    .input-bridge {
+        font-size: 12px;
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .btn-vyslat {
+        padding: 0.6rem 1rem;
+        font-size: 10px;
+    }
+    
+    .btn-attach svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* ─── CANVAS PANEL ─── */
+    .canvas-panel {
+        width: 100% !important;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+    
+    .canvas-header {
+        height: auto;
+        padding: 0.5rem;
+    }
+    
+    .canvas-status {
+        gap: 0.3rem;
+    }
+    
+    #canvas-title {
+        font-size: 10px;
+    }
+    
+    .ping-dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .canvas-actions {
+        gap: 0.3rem;
+    }
+    
+    .view-tabs {
+        padding: 2px;
+    }
+    
+    .tab-btn {
+        padding: 4px 8px;
+        font-size: 8px;
+    }
+    
+    .action-group {
+        gap: 0.2rem;
+    }
+    
+    .btn-action {
+        padding: 0.35rem 0.5rem;
+        font-size: 8px;
+        gap: 0.2rem;
+    }
+    
+    .btn-action span {
+        font-size: 12px;
+    }
+    
+    .btn-exit {
+        padding: 0.35rem 0.7rem;
+        font-size: 9px;
+    }
+    
+    .code-editor {
+        font-size: 11px;
+        padding: 1rem;
+    }
+    
+    /* ─── MODÁLY ─── */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+    }
+    
+    .modal-header h2 {
+        font-size: 0.9rem;
+    }
+    
+    .calibration-modal input,
+    #ai-instructions-input {
+        font-size: 12px;
+        padding: 0.6rem;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .modal-footer button {
+        width: 100%;
+    }
+    
+    /* ─── HLASOVÝ MODAL ─── */
+    .voice-modal {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .voice-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .voice-card {
+        padding: 0.75rem;
+    }
+    
+    .voice-card-title {
+        font-size: 11px;
+    }
+    
+    .voice-card-description {
+        font-size: 9px;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   📱 MOBILE LANDSCAPE (481px - 767px)
+   Kompaktní režim - horizontální orientace
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    
+    .chat-sidebar {
+        width: 100%;
+    }
+    
+    .tactical-header {
+        height: 70px;
+        padding: 1rem;
+    }
+    
+    .ship-id h1 {
+        font-size: 14px;
+    }
+    
+    .header-controls {
+        gap: 0.3rem;
+    }
+    
+    .btn-iconic {
+        padding: 0.4rem 0.7rem;
+        font-size: 8px;
+    }
+    
+    .message-display {
+        padding: 1.5rem;
+    }
+    
+    .bubble {
+        font-size: 13px;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ship-stats {
+        gap: 2rem;
+    }
+    
+    .input-bridge {
+        font-size: 13px;
+    }
+    
+    .canvas-panel {
+        width: 100% !important;
+    }
+    
+    .canvas-header {
+        padding: 0.6rem;
+    }
+    
+    .canvas-actions {
+        gap: 0.4rem;
+    }
+    
+    .btn-action {
+        padding: 0.4rem 0.7rem;
+        font-size: 8px;
+    }
+    
+    .tab-btn {
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+    
+    .code-editor {
+        font-size: 12px;
+        padding: 1.5rem;
+    }
+    
+    .modal-content {
+        width: 90%;
+    }
+    
+    .voice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   📱 TABLET PORTRAIT (768px - 1024px)
+   Střední režim - ideální pro tablety ve vertikální orientaci
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .app-container.canvas-active .chat-sidebar {
+        width: 350px;
+    }
+    
+    .tactical-header {
+        height: 75px;
+        padding: 1.25rem;
+    }
+    
+    .ship-id h1 {
+        font-size: 15px;
+    }
+    
+    .header-controls {
+        gap: 0.5rem;
+    }
+    
+    .message-display {
+        padding: 1.75rem;
+    }
+    
+    .msg-wrapper {
+        max-width: 90%;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .ship-stats {
+        gap: 2.5rem;
+    }
+    
+    .stat-item {
+        font-size: 10px;
+    }
+    
+    .canvas-header {
+        padding: 1.25rem;
+    }
+    
+    .canvas-actions {
+        gap: 1rem;
+    }
+    
+    .code-editor {
+        font-size: 13px;
+        padding: 2rem;
+    }
+    
+    .modal-content {
+        width: 85%;
+        max-width: 700px;
+    }
+    
+    .voice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   💻 TABLET LANDSCAPE (1025px - 1279px)
+   Plnohodnotný režim - tablety v landscape nebo malé notebooky
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (min-width: 1025px) and (max-width: 1279px) {
+    
+    .app-container.canvas-active .chat-sidebar {
+        width: 400px;
+    }
+    
+    .tactical-header {
+        height: 80px;
+    }
+    
+    .message-display {
+        padding: 2rem;
+    }
+    
+    .msg-wrapper {
+        max-width: 85%;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .ship-stats {
+        gap: 3rem;
+    }
+    
+    .canvas-body {
+        /* Standardní desktop zobrazení */
+    }
+    
+    .code-editor {
+        font-size: 14px;
+    }
+    
+    .modal-content {
+        width: 80%;
+        max-width: 800px;
+    }
+    
+    .voice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   💻 DESKTOP SMALL (1280px - 1439px)
+   Standardní desktop - většina běžných monitorů
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    
+    .app-container.canvas-active .chat-sidebar {
+        width: 450px;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    
+    .ship-stats {
+        gap: 3.5rem;
+    }
+    
+    .modal-content {
+        max-width: 900px;
+    }
+    
+    .voice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   🖥️ DESKTOP MEDIUM (1440px - 1919px)
+   Širokoúhlé monitory - optimalizované zobrazení
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+    
+    .app-container.canvas-active .chat-sidebar {
+        width: 500px;
+    }
+    
+    .tactical-header {
+        padding: 0 2rem;
+    }
+    
+    .message-display {
+        padding: 2.5rem;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .ship-stats {
+        gap: 4rem;
+    }
+    
+    .code-editor {
+        font-size: 15px;
+        padding: 3rem;
+    }
+    
+    .modal-content {
+        max-width: 1000px;
+    }
+    
+    .voice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   🖥️ DESKTOP LARGE / 2K (1920px - 2559px)
+   Full HD a 2K monitory - maximální využití prostoru
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+    
+    .app-container.canvas-active .chat-sidebar {
+        width: 550px;
+    }
+    
+    .tactical-header {
+        height: 90px;
+        padding: 0 2.5rem;
+    }
+    
+    .ship-id h1 {
+        font-size: 18px;
+    }
+    
+    .ship-id p {
+        font-size: 10px;
+    }
+    
+    .header-controls {
+        gap: 0.75rem;
+    }
+    
+    .btn-iconic {
+        padding: 0.7rem 1.2rem;
+        font-size: 11px;
+    }
+    
+    .message-display {
+        padding: 3rem;
+        gap: 2.5rem;
+    }
+    
+    .bubble {
+        font-size: 15px;
+        padding: 1.5rem 2rem;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .ship-stats {
+        height: 50px;
+        gap: 5rem;
+    }
+    
+    .stat-item {
+        font-size: 11px;
+    }
+    
+    .input-area {
+        padding: 2rem;
+    }
+    
+    .input-bridge {
+        font-size: 15px;
+        padding: 1rem 1.5rem;
+    }
+    
+    .btn-vyslat {
+        padding: 1rem 2rem;
+        font-size: 12px;
+    }
+    
+    .canvas-header {
+        height: 90px;
+        padding: 1.5rem 2.5rem;
+    }
+    
+    #canvas-title {
+        font-size: 15px;
+    }
+    
+    .tab-btn {
+        padding: 8px 20px;
+        font-size: 11px;
+    }
+    
+    .btn-action {
+        padding: 0.8rem 1.5rem;
+        font-size: 11px;
+    }
+    
+    .btn-exit {
+        padding: 0.8rem 1.8rem;
+        font-size: 12px;
+    }
+    
+    .code-editor {
+        font-size: 16px;
+        padding: 3.5rem;
+        line-height: 1.8;
+    }
+    
+    .modal-content {
+        max-width: 1200px;
+        padding: 3rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .calibration-modal input,
+    #ai-instructions-input {
+        font-size: 15px;
+        padding: 1rem;
+    }
+    
+    .voice-modal {
+        max-width: 1100px;
+        padding: 2.5rem;
+    }
+    
+    .voice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .voice-card {
+        padding: 1.5rem;
+    }
+    
+    .voice-card-title {
+        font-size: 14px;
+    }
+    
+    .voice-card-description {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   🖥️ ULTRA WIDE / 4K+ (2560px+)
+   Premium zobrazení - maximální detail a prostor
+   ───────────────────────────────────────────────────────────────────────── */
+@media only screen and (min-width: 2560px) {
+    
+    .app-container.canvas-active .chat-sidebar {
+        width: 650px;
+    }
+    
+    .tactical-header {
+        height: 100px;
+        padding: 0 3rem;
+    }
+    
+    .ship-id h1 {
+        font-size: 20px;
+        letter-spacing: 0.35em;
+    }
+    
+    .ship-id p {
+        font-size: 11px;
+    }
+    
+    .pulse-bar {
+        width: 5px;
+        height: 45px;
+    }
+    
+    .btn-iconic {
+        padding: 0.8rem 1.5rem;
+        font-size: 12px;
+    }
+    
+    .bridge-select {
+        font-size: 12px;
+        padding: 0.7rem;
+    }
+    
+    .message-display {
+        padding: 4rem;
+        gap: 3rem;
+    }
+    
+    .bubble {
+        font-size: 16px;
+        padding: 2rem 2.5rem;
+        line-height: 1.8;
+    }
+    
+    .msg-label {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .file-preview-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .file-card {
+        padding: 1.25rem;
+    }
+    
+    .file-card-name {
+        font-size: 11px;
+    }
+    
+    .ship-stats {
+        height: 55px;
+        gap: 6rem;
+    }
+    
+    .stat-item {
+        font-size: 12px;
+    }
+    
+    .input-area {
+        padding: 2.5rem;
+    }
+    
+    .bridge-form {
+        max-width: 1600px;
+        gap: 1.5rem;
+    }
+    
+    .input-bridge {
+        font-size: 16px;
+        padding: 1.2rem 1.8rem;
+    }
+    
+    .btn-vyslat {
+        padding: 1.2rem 2.5rem;
+        font-size: 13px;
+    }
+    
+    .btn-attach svg {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .canvas-header {
+        height: 100px;
+        padding: 2rem 3rem;
+    }
+    
+    #canvas-title {
+        font-size: 16px;
+    }
+    
+    .canvas-actions {
+        gap: 2rem;
+    }
+    
+    .tab-btn {
+        padding: 10px 24px;
+        font-size: 12px;
+    }
+    
+    .btn-action {
+        padding: 1rem 2rem;
+        font-size: 12px;
+    }
+    
+    .btn-exit {
+        padding: 1rem 2.2rem;
+        font-size: 13px;
+    }
+    
+    .code-editor {
+        font-size: 18px;
+        padding: 4rem;
+        line-height: 2;
+    }
+    
+    .modal-content {
+        max-width: 1400px;
+        padding: 3.5rem;
+        border-radius: 32px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.12em;
+    }
+    
+    .calibration-modal input,
+    #ai-instructions-input {
+        font-size: 16px;
+        padding: 1.2rem;
+    }
+    
+    .calibration-modal .btn-primary {
+        padding: 1.2rem;
+        font-size: 13px;
+    }
+    
+    .modal-footer button {
+        padding: 1rem 2.5rem;
+        font-size: 12px;
+    }
+    
+    .voice-modal {
+        max-width: 1300px;
+        padding: 3rem;
+    }
+    
+    .voice-modal-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .voice-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .voice-card {
+        padding: 2rem;
+    }
+    
+    .voice-card-icon {
+        font-size: 28px;
+    }
+    
+    .voice-card-title {
+        font-size: 15px;
+    }
+    
+    .voice-card-type {
+        font-size: 9px;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .voice-card-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+    
+    .voice-modal-footer {
+        padding: 1.5rem 0;
+    }
+    
+    .voice-modal-info {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   🎯 ORIENTACE SPECIFICKÉ ÚPRAVY
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Landscape módy pro mobilní zařízení */
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    .tactical-header {
+        height: 60px;
+    }
+    
+    .message-display {
+        padding: 1rem;
+    }
+    
+    .ship-stats {
+        height: 40px;
+    }
+    
+    .input-area {
+        padding: 0.75rem;
+    }
+    
+    .modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   🔧 UTILITY TŘÍDY PRO SPECIFICKÉ PŘÍPADY
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Force mobile layout */
+.force-mobile-layout {
+    .chat-sidebar {
+        width: 100% !important;
+    }
+    
+    .canvas-panel {
+        width: 100% !important;
+        position: fixed !important;
+    }
+}
+
+/* Disable animations on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-main: rgba(99, 102, 241, 0.8);
+        --border-bright: rgba(99, 102, 241, 1);
+    }
+    
+    .status-dot.active,
+    .status-dot.alert {
+        box-shadow: 0 0 15px currentColor;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   📊 PRINT STYLES (pro tisk obsahu chatu)
+   ───────────────────────────────────────────────────────────────────────── */
+@media print {
+    .tactical-header,
+    .ship-stats,
+    .input-area,
+    .canvas-header,
+    .btn-action,
+    .btn-exit {
+        display: none !important;
+    }
+    
+    .chat-sidebar {
+        width: 100% !important;
+        border: none !important;
+    }
+    
+    .message-display {
+        padding: 1cm;
+    }
+    
+    .bubble {
+        page-break-inside: avoid;
+        border: 1px solid #000;
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ✅ END OF MULTIMEDIA RESPONSIVE CSS
+   Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
+   ═══════════════════════════════════════════════════════════════════════════ */
