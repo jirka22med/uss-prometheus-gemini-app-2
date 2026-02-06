@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="multi-file-styles.css">
     <link rel="stylesheet" href=" hlasovi-model-moldar.css">
-     <link rel="stylesheet" href="Multimedialni-velikosti-vsech-obrazovek.css">
+    <link rel="stylesheet" href="Multimedialni-velikosti-vsech-obrazovek.css"> 
     
     <script type="importmap">
     {
@@ -27,10 +27,11 @@
         <div id="chat-sidebar" class="chat-sidebar">
             <header class="tactical-header">
                 <div class="ship-id">
-                    <div class=" "></div>
-                    <div>
-                        <h1>USS PROMETHEUS</h1>
+                    <div class=""></div>
+                    <h1>USS PROMETHEUS</h1>
                         <p>Tactical Command Center v5.8</p>
+                    <div>
+                        
                     </div>
                 </div>
                 <div class="header-controls">
@@ -52,7 +53,7 @@
                         <div id="hlasovi-model-indicator" class="status-dot"></div>
                         <span>nastavení 🔊 </span>
                     </button>
-                    <button id="jirik-manual-opener-btn"  >🧾</button>
+                    <button id="jirik-manual-opener-btn"  >🔊</button>
                     <select id="model-selector" class="bridge-select">
                         <option value="gemini-3-flash-preview">gemini-3 flash</option>
                         <option value="gemini-2.5-flash">gemini-2.5-flash</option>
@@ -76,9 +77,13 @@
             </div>
 
             <div class="ship-stats">
+                  <div class="status-dot alert"></div>
                 <div class="stat-item"><span>CORE:</span> <span id="stat-core" class="emerald">100%</span></div>
+                <div class="status-dot alert"></div>
                 <div class="stat-item"><span>SHIELDS:</span> <span id="stat-shields" class="indigo">98%</span></div>
+                <div class="status-dot alert"></div>
                 <div class="stat-item"><span>SIGNAL:</span> <span id="stat-signal" class="amber">OPTIMAL</span></div>
+                <div class="status-dot alert"></div>
             </div>
 
             <footer class="input-area">
@@ -99,7 +104,7 @@
             <header class="canvas-header">
                 <div class="canvas-status">
                     <div class="ping-dot"></div>
-                    <span id="canvas-title">Tactical Output</span>
+                    <span id="canvas-title">Canvas</span>
                 </div>
                 <div class="canvas-actions">
                     <div class="view-tabs">
@@ -115,7 +120,7 @@
                             <span>💾</span> ULOŽIT
                         </button>
                         <button id="ai-assist-btn" class="btn-action btn-ai">
-                            <span>🤖</span> AI ASISTENT
+                            <span>🤖</span>ASISTENT
                         </button>
                     </div>
                     
@@ -250,98 +255,7 @@
     </div>
     
     
-    <!-- ═══════════════════════════════════════════════════════════
-     🎙️ HLASOVÝ MODAL - USS PROMETHEUS v6.3 FINAL
-     Voice Selection Interface (PRODUCTION READY)
-     Pouze reálně existující hlasy pro cs-CZ
-     ═══════════════════════════════════════════════════════════ -->
 
-<div id="voice-modal-overlay" class="voice-modal-overlay">
-    <div id="voice-modal" class="voice-modal">
-        <div class="voice-modal-header">
-            <h2>🎙️ VÝBĚR HLASOVÉHO MODELU</h2>
-            <button class="voice-modal-close" id="voice-modal-close">✕</button>
-        </div>
-        
-        <!-- Current Voice Display -->
-        <div class="voice-current">
-            Aktuální hlas: <strong id="current-voice-display">cs-CZ-Wavenet-B</strong>
-        </div>
-        
-        <!-- Voice Grid -->
-        <div class="voice-grid">
-            
-            <!-- ═══════════════════════════════════════════════════════════
-                 ⚡ NEURAL2 - NEJVYŠŠÍ KVALITA (pouze 1 hlas pro cs-CZ)
-                 ═══════════════════════════════════════════════════════════ -->
-            
-            <div class="voice-card" data-voice="neural_f" data-voice-name="cs-CZ-Neural2-A">
-                <div class="voice-card-header">
-                    <span class="voice-card-icon">⚡</span>
-                    <h3 class="voice-card-title">Neural2 Ženský</h3>
-                </div>
-                <div class="voice-card-type">NEURAL2 (Premium AI)</div>
-                <p class="voice-card-description">
-                    Nejkvalitnější ženský hlas. Prémiová AI technologie s nejvyšší věrností a přirozeností.
-                </p>
-            </div>
-            
-            <!-- ═══════════════════════════════════════════════════════════
-                 🎯 WAVENET - VYSOKÁ KVALITA (2 hlasy)
-                 ═══════════════════════════════════════════════════════════ -->
-            
-            <div class="voice-card active" data-voice="wavenet_m" data-voice-name="cs-CZ-Wavenet-B">
-                <div class="voice-card-header">
-                    <span class="voice-card-icon">🎯</span>
-                    <h3 class="voice-card-title">WaveNet Mužský</h3>
-                </div>
-                <div class="voice-card-type">WAVENET (Vysoká kvalita)</div>
-                <p class="voice-card-description">
-                    Osvědčený mužský hlas. WaveNet technologie s autoritativním a přirozeným projevem.
-                </p>
-            </div>
-            
-            <div class="voice-card" data-voice="wavenet_f" data-voice-name="cs-CZ-Wavenet-A">
-                <div class="voice-card-header">
-                    <span class="voice-card-icon">🎯</span>
-                    <h3 class="voice-card-title">WaveNet Ženský</h3>
-                </div>
-                <div class="voice-card-type">WAVENET (Vysoká kvalita)</div>
-                <p class="voice-card-description">
-                    Osvědčený ženský hlas. WaveNet technologie s profesionálním a příjemným zabarvením.
-                </p>
-            </div>
-            
-            <!-- ═══════════════════════════════════════════════════════════
-                 ⚙️ STANDARD - RYCHLÉ ODPOVĚDI (1 hlas)
-                 ═══════════════════════════════════════════════════════════ -->
-            
-            <div class="voice-card" data-voice="standard_f" data-voice-name="cs-CZ-Standard-A">
-                <div class="voice-card-header">
-                    <span class="voice-card-icon">⚙️</span>
-                    <h3 class="voice-card-title">Standard (rychlý)</h3>
-                </div>
-                <div class="voice-card-type">STANDARD (Nízká latence)</div>
-                <p class="voice-card-description">
-                    Nejrychlejší odezva. Základní ženský hlas vhodný pro krátké zprávy a systémová hlášení.
-                </p>
-            </div>
-            
-        </div>
-        
-        <!-- Footer -->
-        <div class="voice-modal-footer">
-            <div class="voice-modal-info">
-                <strong>⚡ Neural2-A:</strong> Nejvyšší kvalita - pouze ženský hlas dostupný pro češtinu.<br>
-                <strong>🎯 WaveNet A+B:</strong> Osvědčená vysoká kvalita - ženský i mužský hlas.<br>
-                <strong>⚙️ Standard-A:</strong> Nejrychlejší odezva - základní ženský hlas.<br>
-                <br>
-                💡 <strong>Poznámka:</strong> Hlasy Chirp 3 HD a Neural2 mužský zatím nejsou pro češtinu dostupné.
-            </div>
-        </div>
-    </div>
-</div>
-    
     <script src="jirkuv-hlidac.js" async></script>
     <script type="module" src="serpapi-search.js"></script>
     <script type="module" src="system-prompt.js"></script>
