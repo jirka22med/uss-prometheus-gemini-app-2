@@ -642,20 +642,28 @@ function clearAllFiles() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 🔍 SERPAPI SEARCH MODULE
+// 🔍 SERPAPI SEARCH MODULE - OPRAVENÁ VERZE PRO V4.3
 // ─────────────────────────────────────────────────────────────────────────────
 
 async function handleSearchRequest(query) {
     try {
         tacticalLog('INFO', `SerpAPI vyhledávání: "${query}"`);
         appendMessage('system', `🔍 Vyhledávám: "${query}"...`);
+        
         const results = await searchSerpAPI(query, 5);
-        if (results && results.length > 0) {
+        
+        // ZMĚNA: Modul v4.3 vrací objekt, ne pole. Kontrolujeme organic_results uvnitř.
+        if (results && (results.organic_results && results.organic_results.length > 0 || results.knowledge_graph || results.answer_box)) {
+            
             const formatted = formatSerpAPIResults(results);
-            tacticalLog('SYSTEM', `Nalezeno ${results.length} výsledků`);
+            
+            // Logujeme počet organických výsledků pro diagnostiku
+            const count = results.organic_results ? results.organic_results.length : 1;
+            tacticalLog('SYSTEM', `Nalezeno ${count} výsledků (včetně speciálních bloků)`);
+            
             return formatted;
         } else {
-            tacticalLog('ERROR', 'Žádné výsledky nenalezeny');
+            tacticalLog('ERROR', 'Žádné výsledky nenalezeny v datovém balíčku');
             return "Žádné výsledky z vyhledávání.";
         }
     } catch (error) {
