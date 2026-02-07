@@ -19,8 +19,8 @@
  * Ponechány pouze osvědčené a localhost uzly aktivní.
  */
 const TACTICAL_PROXY_GRID = [
-    // id: 0 - CORSFIX_PRIMARY: Vyřazen (Status 403 na GitHubu)
-    /*
+   // id: 0 - CORSFIX_PRIMARY: Vyřazen (Status 403 na GitHubu)
+    
     {
         id: 0,
         name: "CORSFIX_PRIMARY",
@@ -28,9 +28,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Vysokorychlostní uzel pro localhost operace."
     },
-    */
+   
     // id: 1 - ALLORIGINS_BYPASS: Vyřazen (Signal Aborted / Error)
-    /*
+  
     {
         id: 1,
         name: "ALLORIGINS_BYPASS",
@@ -38,7 +38,7 @@ const TACTICAL_PROXY_GRID = [
         strategy: "JSON_WRAPPER",
         description: "Hybridní uzel pro obcházení GitHub Pages 403 blokace."
     },
-    */
+  
     {
         id: 2,
         name: "CODETABS_RESCUE",
@@ -47,7 +47,7 @@ const TACTICAL_PROXY_GRID = [
         description: "OSVĚDČENÝ VÍTĚZ: Záložní uzel s nízkou latencí pro GitHub Pages."
     },
     // id: 3 - CORSPROXY_IO_SHIELD: Dočasně deaktivován
-    /*
+    
     {
         id: 3,
         name: "CORSPROXY_IO_SHIELD",
@@ -55,9 +55,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Robustní uzel pro těžké datové přenosy."
     },
-    */
+   
     // id: 4 - THINGPROXY_ALPHA: Dočasně deaktivován
-    /*
+    
     {
         id: 4,
         name: "THINGPROXY_ALPHA",
@@ -65,9 +65,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Alternativní uzel pro API bypass."
     },
-    */
+   
     // id: 5 - WORKER_NODE_SIRION: Dočasně deaktivován
-    /*
+   
     {
         id: 5,
         name: "WORKER_NODE_SIRION",
@@ -75,9 +75,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Cloudflare Worker uzel pro stabilitu."
     },
-    */
+  
     // id: 6 - HEROKU_ANYWHERE: Dočasně deaktivován
-    /*
+    
     {
         id: 6,
         name: "HEROKU_ANYWHERE",
@@ -85,7 +85,7 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Klasický uzel (vyžaduje dočasný přístup)."
     },
-    */
+   
     {
         id: 7,
         name: "LOCAL_TUNNEL_9785",
@@ -94,7 +94,7 @@ const TACTICAL_PROXY_GRID = [
         description: "LOKÁLNÍ PŘÍSTAV: Interní Python tunel na tvém Windows serveru."
     },
     // id: 8 - CLOUDFLARE_BYPASS_1: Dočasně deaktivován
-    /*
+     
     {
         id: 8,
         name: "CLOUDFLARE_BYPASS_1",
@@ -102,9 +102,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Vlastní Cloudflare brána."
     },
-    */
+    
     // id: 9 - CLOUDFLARE_BYPASS_2: Dočasně deaktivován
-    /*
+  
     {
         id: 9,
         name: "CLOUDFLARE_BYPASS_2",
@@ -112,9 +112,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Sekundární Cloudflare brána."
     },
-    */
+     
     // id: 10 - NETLIFY_TUNNEL: Dočasně deaktivován
-    /*
+   
     {
         id: 10,
         name: "NETLIFY_TUNNEL",
@@ -122,9 +122,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Netlity serverless uzel."
     },
-    */
+     
     // id: 11 - OPEN_PROXY_SPACE: Dočasně deaktivován
-    /*
+   
     {
         id: 11,
         name: "OPEN_PROXY_SPACE",
@@ -132,9 +132,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_RAW",
         description: "Raw přístup skrze AllOrigins."
     },
-    */
+     
     // id: 12 - SHITTY_PROXY_BUT_WORKS: Dočasně deaktivován
-    /*
+   
     {
         id: 12,
         name: "SHITTY_PROXY_BUT_WORKS",
@@ -142,9 +142,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Uzel poslední instance."
     },
-    */
+     
     // id: 13 - ANOTHER_WORKER_BYPASS: Dočasně deaktivován
-    /*
+    
     {
         id: 13,
         name: "ANOTHER_WORKER_BYPASS",
@@ -152,9 +152,9 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Alternativní HTML driven uzel."
     },
-    */
+   
     // id: 14 - EMERGENCY_DIRECT_LINK: Dočasně deaktivován
-    /*
+  
     {
         id: 14,
         name: "EMERGENCY_DIRECT_LINK",
@@ -162,7 +162,7 @@ const TACTICAL_PROXY_GRID = [
         strategy: "DIRECT_GET",
         description: "Nouzové přímé spojení bez proxy."
     }
-    */
+   
 ];
 
 /**
@@ -526,3 +526,4 @@ if (check.combat_ready === "NO") {
 
 // KONEC SOUBORU - ŽÁDNÁ DATA NEBYLA KOMPRIMOVÁNA. 550+ ŘÁDKŮ LOGIKY A REDUNDANCE.
 // ═══════════════════════════════════════════════════════════════════════════════════════════════════
+
