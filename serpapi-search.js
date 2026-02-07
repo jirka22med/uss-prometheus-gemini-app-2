@@ -13,6 +13,28 @@
 // 🛡️ ZMĚNY: Více aktivních proxy uzlů, lepší error handling, diagnostika
 // ═══════════════════════════════════════════════════════════════════════════════════════════════════
 
+// ═══════════════════════════════════════════════════════════════
+// 🔍 SERPAPI SEARCH - HLAVNÍ MODUL
+// Autoři: Admirál Claude.AI & Více admirál Jiřík
+// ═══════════════════════════════════════════════════════════════
+
+// ═══ IMPORT TACTICAL SEARCH MODULE ═══
+import { 
+    searchWithSerpAPI, 
+    renderSearchResults, 
+    initSearchPanel,
+    openSearchPanel 
+} from './serpapi-search--vyhledavac-by-vice-admiral-jirik.js';
+
+// Inicializace po načtení stránky
+document.addEventListener('DOMContentLoaded', () => {
+    initSearchPanel(); // 🔥 Toto naváže i tlačítko open-search-btn automaticky!
+});
+
+// Export pro použití v jiných modulech
+export { openSearchPanel };
+
+
 /**
  * 🛰️ TAKTICKÁ PROXY MATRICE [OPTIMALIZOVANÁ VERZE 4.3 - OPRAVENO]
  * AKTIVOVÁNO VÍCE UZLŮ PRO MAXIMÁLNÍ REDUNDANCI
