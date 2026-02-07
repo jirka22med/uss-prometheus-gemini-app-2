@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="multi-file-styles.css">
     <link rel="stylesheet" href=" hlasovi-model-moldar.css">
     <link rel="stylesheet" href="Multimedialni-velikosti-vsech-obrazovek.css"> 
-    
+    <link rel="stylesheet" href="serpapi-search--vyhledavac-by-vice-admiral-jirik.css">
     <script type="importmap">
     {
       "imports": {
@@ -50,6 +50,7 @@
                     
                      
                     <button id="jirik-manual-opener-btn"  >🧾</button>
+                    <button id="open-search-btn" class="btn-iconic" title="Tactical Search">SEARCH</button>
                     <select id="model-selector" class="bridge-select">
                         <option value="gemini-3-flash-preview">gemini-3 flash</option>
                         <option value="gemini-2.5-flash">gemini-2.5-flash</option>
@@ -250,10 +251,44 @@
         </div>
     </div>
     
+    <!-- 🔍 SERPAPI VYHLEDÁVAČ - TACTICAL SEARCH MODULE -->
+<div id="serpapi-search-panel" class="search-panel hidden">
+    <header class="search-header">
+        <div class="search-title">
+            <div class="ping-dot"></div>
+            <span>🔍 TACTICAL SEARCH</span>
+        </div>
+        <button id="close-search-btn" class="btn-exit">Zavřít</button>
+    </header>
     
+    <div class="search-body">
+        <form id="serpapi-search-form" class="search-form">
+            <input 
+                type="text" 
+                id="search-query-input" 
+                placeholder="Zadej vyhledávací dotaz..."
+                class="search-input"
+                autocomplete="off"
+            >
+            <button type="submit" class="btn-search">
+                🔍 SKENOVAT
+            </button>
+        </form>
+        
+        <div id="search-status" class="search-status hidden">
+            <div class="scanning-indicator"></div>
+            <span>SKENOVÁNÍ DATABÁZÍ...</span>
+        </div>
+        
+        <div id="search-results-container" class="results-container">
+            <!-- Výsledky se vloží dynamicky -->
+        </div>
+    </div>
+</div>
 
-    <script src="jirkuv-hlidac.js" async></script>
+   <!-- <script src="jirkuv-hlidac.js" async></script> -->
     <script type="module" src="serpapi-search.js"></script>
+    <script type="module" src="serpapi-search--vyhledavac-by-vice-admiral-jirik.js"></script> 
     <script type="module" src="system-prompt.js"></script>
     <script type="module" src="gemini-api.js"></script>
     <script type="module" src="canvas-editor.js"></script>
