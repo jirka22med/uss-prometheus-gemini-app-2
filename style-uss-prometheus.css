@@ -19,27 +19,6 @@
     --scroll-brightness: 1.2;
 }
 
- 
- 
- 
-
-/* Hlavní wrapper přehrávače */
-.player-content-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: var(--spacing-md);
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
 
 /* Nadpis a název skladby */
   #trackTitle {
@@ -187,6 +166,7 @@ button, .control-button {
     user-select: none;
     min-width: 50px;
     box-shadow: var(--glow-effect);
+     
 }
 
 button:hover, .control-button:hover {
@@ -279,12 +259,7 @@ button:active, .control-button:active {
         height: 16px;
     }
 
-    button, .control-button {
-        font-size: 0.95rem;
-        padding: 8px 12px;
-        min-width: 40px;
-    }
-
+     
     
 
 @media (max-width: 480px) {
@@ -326,9 +301,8 @@ button:active, .control-button:active {
     }
 
     button, .control-button {
-        font-size: 0.85rem;
-        padding: 6px 10px;
-        border-radius: 15px;
+         
+        
     }
      
 
