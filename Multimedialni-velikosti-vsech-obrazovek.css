@@ -22,7 +22,13 @@
    Ultra kompaktní režim - vertikální orientace
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (max-width: 480px) {
-    
+
+html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
+   
     /* ─── HLAVNÍ CONTAINER ─── */
     .app-container {
         flex-direction: column;
@@ -1053,4 +1059,5 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
+
 
