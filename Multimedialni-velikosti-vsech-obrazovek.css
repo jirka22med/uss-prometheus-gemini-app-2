@@ -35,8 +35,8 @@
     /* ─── CHAT SIDEBAR ─── */
     .chat-sidebar {
         width: 100%  ;
-        height: 90vh;  /* Fixní výška */
-        max-height: 90vh;  /* Maximální výška */
+        height: 100vh;  /* Fixní výška */
+        max-height: 100vh;  /* Maximální výška */
         display: flex;
         flex-direction: column;
       
@@ -49,7 +49,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         min-height: 300px;  /* Menší minimum pro Android */
-        max-height: calc(100vh - 250px);  /* Odečte všechny lišty + komponenty */
+        max-height: calc(100vh - 240px);  /* Odečte všechny lišty + komponenty */
         height: auto;
         padding: 1rem 0.5rem;
         padding-bottom: 2rem;  /* Extra padding pro scroll */
@@ -61,7 +61,7 @@
         flex-shrink: 0;  /* Nikdy se nesmí zmenšit */
         position: relative;
         z-index: 10;
-        margin-top: -10px;
+        
     }
     
     /* ─── TACTICAL HEADER ─── */
@@ -70,32 +70,32 @@
         padding: 0.40rem;
         flex-direction: column;
         gap: 0.5rem;
-        margin-top: -5px;
+         
     }
     
     .ship-id h1 {
         font-size: 12px;
         letter-spacing: 0.2em;
-        margin-top: -2px;
+         
         z-index: 10;
     }
     
     .ship-id p {
         font-size: 8px;
-        margin-top: -2px;
+         
         z-index: 10;
     }
     
     .pulse-bar {
         width: 3px;
         height: 25px;
-        margin-top: -12px;
+         
     }
     
     /* ─── HEADER CONTROLS ─── */
     .header-controls {
         gap: 0.2rem;  /* Menší mezery mezi tlačítky */
-         margin-top: -2px;
+         
     }
     
     .btn-iconic {
@@ -186,7 +186,7 @@
     /* ─── SHIP STATS ─── */
     .ship-stats {
         height: auto;
-        padding: 0.90rem;
+        padding: 1.10rem;
         gap:  1rem;
         flex-wrap: wrap;
         z-index: 10; 
@@ -1114,3 +1114,4 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
+
