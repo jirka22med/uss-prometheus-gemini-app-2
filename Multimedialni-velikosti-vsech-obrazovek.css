@@ -3,10 +3,10 @@
    CHIEF ARCHITECT: Vice Admirál Jiřík + Admirál Claude
    ÚČEL: Univerzální responsivita pro VŠECHNY velikosti obrazovek
    STATUS: PRODUCTION READY / KOMPLETNÍ COVERAGE
-    
+   
    📐 BREAKPOINTY:
    
-   📐 BREAKPOINTY:     
+   📐 BREAKPOINTY:
    - 📱 Mobile Portrait:     320px - 480px
    - 📱 Mobile Landscape:    481px - 767px
    - 📱 Tablet Portrait:     768px - 1024px
@@ -28,36 +28,37 @@
         flex-direction: column;
     }
     
-    /* ─── CHAT SIDEBAR ─── */
+    /* ─── CHAT SIDEBAR - ANDROID ─── */
     .chat-sidebar {
         width: 100% !important;
-        height: 100vh;  /* Fixní výška */
-        max-height: 100vh;  /* Maximální výška */
+        height: auto;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        overflow: hidden;  /* Zabráníme scroll na sidebaru */
-    }
-    
-    /* Message display musí být scrollovatelný */
-    .message-display {
-       height:  20px;  /* Fixní výška */
-        overflow-y: auto;
-         /* Důležité pro flex! */
-    }
-    
-    /* Input area vždy viditelný na spodku */
-    .input-area {
-        flex-shrink: 0;  /* Nikdy se nesmí zmenšit */
         position: relative;
-        z-index: 10;
+        padding-bottom: 0;  /* Žádný extra padding */
     }
     
     /* ─── TACTICAL HEADER ─── */
     .tactical-header {
+        flex-shrink: 0;
         height: auto;
         padding: 0.75rem;
         flex-direction: column;
         gap: 0.5rem;
+    }
+    
+    /* ─── MESSAGE DISPLAY - ANDROID OPTIMALIZACE ─── */
+    .message-display {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        min-height: 300px;  /* Menší minimum pro Android */
+        max-height: calc(100vh - 250px);  /* Odečte všechny lišty + komponenty */
+        height: auto;
+        padding: 1rem 0.5rem;
+        padding-bottom: 2rem;  /* Extra padding pro scroll */
+        gap: 1rem;
     }
     
     .ship-id h1 {
@@ -157,7 +158,9 @@
     
     /* ─── SHIP STATS ─── */
     .ship-stats {
-        height: auto;
+        flex-shrink: 0;
+        height: 40px;
+        min-height: 40px;
         padding: 0.5rem;
         gap: 1rem;
         flex-wrap: wrap;
@@ -167,9 +170,20 @@
         font-size: 9px;
     }
     
-    /* ─── INPUT AREA ─── */
+    /* ─── INPUT AREA - ANDROID STICKY BOTTOM ─── */
     .input-area {
+        flex-shrink: 0;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;  /* Vyšší z-index */
+        background: var(--bg-main, #0a0e27);
+        border-top: 2px solid var(--border-main, #1e293b);
+        min-height: 70px;
         padding: 0.75rem 0.5rem;
+        padding-bottom: 1rem;  /* Extra padding pro Android nav bar */
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.5);  /* Stín pro viditelnost */
     }
     
     .bridge-form {
@@ -1021,21 +1035,3 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
