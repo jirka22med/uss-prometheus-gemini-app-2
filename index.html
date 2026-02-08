@@ -10,6 +10,9 @@
     <link rel="stylesheet" href=" hlasovi-model-moldar.css">
     <link rel="stylesheet" href="Multimedialni-velikosti-vsech-obrazovek.css"> 
     <link rel="stylesheet" href="serpapi-search--vyhledavac-by-vice-admiral-jirik.css">
+    <link rel="stylesheet" href="style-uss-prometheus.css">
+    
+    
     <script type="importmap">
     {
       "imports": {
@@ -30,9 +33,18 @@
                     <div class=""></div>
                     <h1>USS PROMETHEUS</h1>
                         <p>Tactical Command Center v5.8</p>
-                    <div>  
+                    
+                    
+                    <div> 
+                        
                     </div>
                 </div>
+                <div class="player-container"  >
+<h2 id="trackTitle" style="font-size: 15px;"  >Vyberte skladbu</h2>
+                     </div>
+                
+                
+                
                 <div class="header-controls">
                     <button id="manual-canvas-btn" class="btn-iconic" title="Taktická obrazovka">
                         <span>🖥️ Taktik</span>
@@ -50,14 +62,42 @@
                     
                      
                    <!-- <button id="jirik-manual-opener-btn" >🧾</button> -->
-                    <button id="debug-manager-button">🛠️ DIAGNOSTIKA</button>
+                   <!-- <button id="debug-manager-button">🛠️ DIAGNOSTIKA</button> -->
+                    <button id="fullscreen-toggle" title="Celá obrazovka (F)" style="font-size: 5px; border-radius: 0px;"    >⛶</button>
+                     <button id="prev-button" title="Předchozí (Šipka vlevo)" style="font-size: 5px; border-radius: 0px;"  >◀️⬅️</button>
+<button id="play-button" title="Přehrát (Mezerník/P)" style="font-size: 5px; border-radius: 0px;"   >🚀</button>
+<button id="pause-button" title="Pauza (Mezerník/P)" style="font-size: 5px; border-radius: 0px;" >🖖⏸️</button>
+<button id="next-button" title="Další (Šipka vpravo)" style="font-size: 5px; border-radius: 0px;" >▶️➡️</button>
                     <button id="open-search-btn" class="btn-iconic" title="Tactical Search">SEARCH</button>
                     <select id="model-selector" class="bridge-select">
                         <option value="gemini-3-flash-preview">gemini-3 flash</option>
                         <option value="gemini-2.5-flash">gemini-2.5-flash</option>
                     </select>
-                </div>
+                </div> 
+                
+                 <audio id="audioPlayer" style="display: none;">
+    <source id="audioSource" src="" type="audio/mpeg" style="display: none;">
+</audio> 
+                 
+                <div id="control-panel" style="display: none;"  >
+           <!-- hl kontejner tlačítek -->
+        <div class="controls" style="display: none;" >
+            
+              
+ 
+            
+                </div></div>
+                <div class="time-controls" id="progres-bar-time-part" style="display: none" >
+        <span id="currentTime" style="display:inline-block;padding:2px;background:#000;border:2px solid #C00000;color:#fff;margin:0;">
+         <span class="time-part" style="color: white;">00</span><span class="time-separator" style="color: white;">:</span><span class="time-part" style="color: white;">00</span><span class="time-separator" style="color: white;">:</span><span class="time-part" style="color: white;">00</span>
+        </span>
+        <input type="range" id="progress-bar" min="0" max="100" value="0" style="display:inline-block;padding:2px;background:#000;border:2px solid #C00000;color:#fff;margin:0;">
+        <span id="duration" style="display:inline-block;padding:2px;background:#000;border:2px solid #C00000;color:#fff;margin:0;">
+          <span class="time-part" style="color: white;">00</span><span class="time-separator" style="color: white;">:</span><span class="time-part" style="color: white;">00</span><span class="time-separator" style="color: white;">:</span><span class="time-part" style="color: white;">00</span>
+        </span>
+      </div>
             </header>
+   
 
             <div id="chat-messages" class="message-display">
                 <div class="initial-scan" >
@@ -289,7 +329,7 @@
     <script type="module" src="script-.js"></script>  <!-- INCILIZACE ZE STAR TREK HUDEBNÍHO PŘEHRAVAČE PRO MODUL: 1 A 2 -->
     <script src="buttonVisibilityManager.js" defer></script>  <!-- MANAGER pro Ui tlačítka zobrazovač a skrívač -->
     <script src="notificationFix.js" defer></script> <!-- notifikační systém -->
-    
+    <script src="myPlaylist.js"></script>
     
     <!-- USS-PROMETHEUS -->
     
