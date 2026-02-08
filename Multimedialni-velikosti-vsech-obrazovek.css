@@ -23,11 +23,7 @@
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (max-width: 480px) {
     
-     html, body {
-  overflow-y: auto;
-        overflow-y: auto;
-        overflow: auto;   
-}
+     
     
     
     /* ─── HLAVNÍ CONTAINER ─── */
@@ -49,10 +45,15 @@
     
     /* Message display musí být scrollovatelný */
     .message-display {
-       height: 70vh;  /* Fixní výška */
-        
-        margin-top: -5px;
-         /* Důležité pro flex! */
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        min-height: 300px;  /* Menší minimum pro Android */
+        max-height: calc(100vh - 250px);  /* Odečte všechny lišty + komponenty */
+        height: auto;
+        padding: 1rem 0.5rem;
+        padding-bottom: 2rem;  /* Extra padding pro scroll */
+        gap: 1rem;
     }
     
     /* Input area vždy viditelný na spodku */
@@ -140,7 +141,7 @@
         padding: 0.8rem ;
         font-size: 12px;
         line-height: 1.1;
-        display: none;
+         
     }
     
     .msg-label {
@@ -1113,3 +1114,4 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
+
