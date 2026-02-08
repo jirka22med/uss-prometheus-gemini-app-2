@@ -23,19 +23,24 @@
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (max-width: 480px) {
     
+     html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
+    
+    
     /* ─── HLAVNÍ CONTAINER ─── */
     .app-container {
         flex-direction: column;
-         overflow-y: auto;
-        overflow-y: auto;
-        overflow: auto;
+         
     }
     
     /* ─── CHAT SIDEBAR ─── */
     .chat-sidebar {
         width: 100%  ;
-        height: 85vh;  /* Fixní výška */
-        max-height: 85vh;  /* Maximální výška */
+        height: 86vh;  /* Fixní výška */
+        max-height: 86vh;  /* Maximální výška */
         display: flex;
         flex-direction: column;
       
@@ -187,7 +192,7 @@
     }
     
     .stat-item {
-        font-size: 13px;
+        font-size: 8px;
          
     }
     
