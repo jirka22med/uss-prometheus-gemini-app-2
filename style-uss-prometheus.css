@@ -1,0 +1,434 @@
+/* Modernizované proměnné a základní nastavení */
+:root {
+    --spacing-unit: 16px;
+    --primary-color: #00B7EB; /* Jasnější modrá pro Star Trek estetiku */
+    --secondary-color: #39FF14; /* Neonově zelená pro akcenty */
+    --accent-color: #FF073A; /* Výrazná červená pro důležité prvky */
+    --background-dark: #0D1B2A; /* Tmavší modročerné pozadí */
+    --background-light: #1B263B; /* Světlejší pozadí pro playlist a kontejnery */
+    --text-primary: #E0E1DD; /* Světlý text pro čitelnost */
+    --text-secondary: #778DA9; /* Sekundární text pro méně důležité prvky */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: -5px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --font-main: 'Orbitron', 'Segoe UI', system-ui, sans-serif; /* Orbitron pro sci-fi styl */
+    --font-text: 'Roboto', sans-serif; /* Moderní font pro delší texty */
+    --glow-effect: 0 0 8px rgba(0, 183, 235, 0.5);
+    --scroll-glow: rgba(57, 255, 20, 0.6);
+    --scroll-brightness: 1.2;
+}
+
+ 
+ 
+ 
+
+/* Hlavní wrapper přehrávače */
+.player-content-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--spacing-md);
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Nadpis a název skladby */
+  #trackTitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.0rem;
+    font-weight: 700;
+   /* background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));*/
+  /*  background-size: 300% 300%;*/
+    -webkit-background-clip: text;
+    background-clip: text;
+   /* color: transparent;
+    animation: gradientAnimation 15s ease infinite;*/
+    margin: var(--spacing-md) 0;
+    text-shadow: var(--glow-effect);
+    user-select: none;
+    z-index: 10;
+    margin-top: -5px;
+}
+
+#trackTitle {
+    font-size: 1.9rem;
+    margin-bottom: var(--spacing-md);
+}
+
+ 
+#nazev-prehravace-nazev-skladby{
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trackTitle {
+    padding:2px;
+    background:#000;
+    border:2px solid #C00000;
+     
+    margin-left: 0px;
+    margin-right: 0px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+    
+    width: fit-content;
+}
+
+ 
+ 
+
+/* Časové ovládání */
+.time-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+}
+
+.time-controls .time-part, 
+.time-controls #currentTime .time-part, 
+.time-controls #duration .time-part {
+    font-family: 'Courier New', monospace;
+    font-size: 1.6rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+.time-controls .time-separator {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Posuvník pro pokrok skladby */
+#progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    max-width: 450px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    outline: none;
+    margin: 0 var(--spacing-sm);
+    box-shadow: var(--glow-effect);
+}
+
+#progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+    border: 2px solid var(--background-dark);
+    box-shadow: var(--glow-effect);
+}
+
+#progress-bar::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+    border: 2px solid var(--background-dark);
+    box-shadow: var(--glow-effect);
+}
+
+/* Ovládací tlačítka */
+.controls {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+button, .control-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    min-width: 50px;
+    box-shadow: var(--glow-effect);
+}
+
+button:hover, .control-button:hover {
+    background: var(--primary-color);
+    color: var(--background-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 183, 235, 0.5);
+}
+
+button:active, .control-button:active {
+    transform: scale(0.95);
+}
+
+#play-button.active, #pause-button.active, #loop-button.active, #shuffle-button.active, #fullscreen-toggle.active, #timer-button.active, #favorites-button.active {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    box-shadow: 0 0 12px var(--primary-color);
+}
+
+#pause-button.active {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 12px var(--accent-color);
+}
+
+#loop-button.active {
+    background-color: var(--secondary-color);
+    color: var(--background-dark);
+    box-shadow: 0 0 12px var(--secondary-color);
+}
+
+ 
+
+/* Zpráva o načítání */
+.error-image-placeholder {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(27, 38, 59, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+    border-radius: 10px;
+    box-shadow: var(--glow-effect);
+}
+
+.loading-message {
+    text-align: center;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-family: var(--font-main);
+    text-shadow: var(--glow-effect);
+}
+
+ 
+/* Media Queries pro responzivitu */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2.2rem;
+        margin: var(--spacing-md) 0;
+    }
+
+    #trackTitle {
+        font-size: 1.6rem;
+    }
+
+    .audio-container {
+        padding: var(--spacing-sm);
+        border-radius: 15px;
+        width: calc(95% - 2px);
+    }
+
+    .time-controls {
+        flex-direction: row;
+        gap: 6px;
+    }
+
+    #progress-bar {
+        height: 8px;
+        max-width: 350px;
+    }
+
+    #progress-bar::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+    }
+
+    #progress-bar::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+    }
+
+    button, .control-button {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+        min-width: 40px;
+    }
+
+    
+
+@media (max-width: 480px) {
+    .player-content-wrapper {
+        padding: var(--spacing-sm);
+    }
+
+    .header-title {
+        font-size: 1.0rem;
+        margin: var(--spacing-sm) 0;
+    }
+
+    #trackTitle {
+        font-size: 1.3rem;
+    }
+
+    .audio-container {
+        width: calc(95% - 2px);
+        border-radius: 12px;
+    }
+
+    .time-controls .time-part, 
+    .time-controls .time-separator {
+        font-size: 1.3rem;
+    }
+
+    #progress-bar {
+        height: 7px;
+    }
+
+    #progress-bar::-webkit-slider-thumb {
+        width: 14px;
+        height: 14px;
+    }
+
+    #progress-bar::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+    }
+
+    button, .control-button {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        border-radius: 15px;
+    }
+     
+
+/* Globální deaktivace označování textu */
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.sync-status-container {
+    padding: 1rem;
+    border: 2px solid #ffcc00; /* Ohraničení jako varovný štít */
+    border-radius: 8px;        /* Jemné zakulacení rohů */
+    background-color: #1a1a1a; /* Výplň v tmavém stylu můstku */
+    max-width: 400px;
+    margin: 1rem auto;
+    box-shadow: 0 0 10px #ffcc00aa; /* Jemné glow efekty */
+}
+
+.sync-message {
+    color: #00ffff; /* Barva textu – klidně změň na jinou */
+    font-size: 1.2rem;
+    font-family: "Consolas", "Courier New", monospace;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+ 
+ 
+
+/* Celý posuvník */
+::-webkit-scrollbar {
+  width: 12px;        /* šířka vertikálního scrollbaru */
+  height: 12px;       /* výška horizontálního scrollbaru */
+  z-index: 1 ;
+}
+
+/* Dráha posuvníku */
+::-webkit-scrollbar-track {
+  background: #111;   /* tmavé pozadí dráhy */
+  border-radius: 6px;
+  z-index: 1 ;  
+}
+
+/* Tažená část (thumb) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff0080, #8000ff); /* duhový efekt */
+  border-radius: 6px;
+  border: 3px solid #111; /* trochu mezery kolem thumb */
+  z-index: 1 ;    
+}
+
+/* Při hoveru */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff80c0, #bf00ff);
+  z-index: 1 ;    
+}
+
+
+
+.performance-mode {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            color: #0f0;
+    z-index: 99999;
+        }
+
+
+/* 🖖 STAR TREK - VIZUÁLNÍ ODEZVA INTERAKČNÍHO ŠTÍTU */
+
+/* Stav, kdy je tlačítko nebo playlist neaktivní */
+.shield-active {
+    opacity: 0.4 !important; /* Výrazné zprůhlednění */
+    filter: grayscale(1) brightness(0.7) !important; /* Totální zešednutí a ztmavení */
+    cursor: wait !important; /* Změna kurzoru na hodiny/načítání */
+    transition: all 0.3s ease-in-out; /* Hladký přechod štítů */
+    box-shadow: none !important; /* Odstranění záře (pokud ji tlačítko má) */
+    position: relative;
+}
+
+/* Speciální efekt pro Play Button, aby vypadal jako vypnutý terminál */
+#play-button.shield-active {
+    border-color: #555 !important;
+    background: #222 !important;
+}
+
+/* Playlist v režimu štítu */
+#playlist.shield-active {
+    background: rgba(20, 20, 20, 0.8) !important;
+    pointer-events: none;
+}
+
+
