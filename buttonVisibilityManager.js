@@ -162,7 +162,52 @@ const BUTTON_CONFIG = {
         essential: true,
         description: ' '
     },
-     
+    
+    
+    
+    'play-button': {
+        name: '▶️ Přehrát',
+        category: 'Přehrávání',
+        essential: false,
+        description: 'Spustí přehrávání skladby'
+    },
+    'pause-button': {
+        name: '⏸️ Pauza', 
+        category: 'Přehrávání',
+        essential: false,
+        description: 'Pozastaví přehrávání'
+    },
+    'prev-button': {
+        name: '⏮️ Předchozí',
+        category: 'Přehrávání',
+        essential: false,
+        description: 'Přehraje předchozí skladbu'
+    },
+    'next-button': {
+        name: '⏭️ Další',
+        category: 'Přehrávání', 
+        essential: false,
+        description: 'Přehraje další skladbu'
+    },
+'favorites-button': {
+        name: '⭐ Oblíbené',
+        category: 'Pokročilé',
+        essential: false,
+        description: 'Zobrazí oblíbené skladby'
+    },
+    
+     'progres-bar-time-part': {
+        name: '⏱️ Progress bar + časovač',
+        category: 'Informace Přehravače',
+        essential: false,
+        description: 'Kompletní panel s časovým ukazatelem a progress barem skladby'
+    },
+'trackTitle': {
+   name: 'název skladby',
+        category: 'Informace Přehravače',
+        essential: false,
+        description: 'Vtéto části se zobrazoví názvi písniček ve Star Trek Hudebním Přehravači'
+        },
 };
 
 // --- Defaultní viditelnost tlačítek ---
@@ -191,6 +236,14 @@ const DEFAULT_VISIBILITY = {
     'canvas-editor': true,
     'canvas-preview': true,
     
+    
+    'play-button': false,
+    'pause-button': false,
+    'prev-button': false,
+    'next-button': false,
+    'favorites-button': false,
+    'progres-bar-time-part': false,
+    'trackTitle': false,
 };
  
 
