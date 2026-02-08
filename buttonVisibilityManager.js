@@ -720,7 +720,7 @@ function addVisibilityModalStyles() {
             background: linear-gradient(45deg, #ff6b35, #cc5522) !important;
             border: none !important;
             border-radius: 10px !important;
-            padding: 10px 16px !important;
+            padding: 6px 8px !important;
             color: white !important;
             font-weight: bold !important;
             cursor: pointer !important;
