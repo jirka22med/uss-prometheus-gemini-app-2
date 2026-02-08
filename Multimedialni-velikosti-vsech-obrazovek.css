@@ -1,21 +1,10 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   🚀 USS PROMETHEUS - MULTIMEDIA RESPONSIVE CSS v1.0
+   🚀 USS PROMETHEUS - MULTIMEDIA RESPONSIVE CSS v1.1
    CHIEF ARCHITECT: Vice Admirál Jiřík + Admirál Claude
    ÚČEL: Univerzální responsivita pro VŠECHNY velikosti obrazovek
    STATUS: PRODUCTION READY / KOMPLETNÍ COVERAGE
    
-   ═══════════════════════════════════════════════════════════════════════════
-   🔵 GLOBÁLNÍ ÚPRAVA: PULSE-BAR VLEVO VEDLE USS PROMETHEUS
-   ═══════════════════════════════════════════════════════════════════════════ */
-
-/* Přesun pulse-bar na LEVOU stranu názvu */
-.ship-id {
-    flex-direction: row-reverse !important;
-    gap: 1rem;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   📐 RESPONSIVE BREAKPOINTY - ZAČÁTEK
+   📐 BREAKPOINTY:
    
    📐 BREAKPOINTY:
    - 📱 Mobile Portrait:     320px - 480px
@@ -42,7 +31,25 @@
     /* ─── CHAT SIDEBAR ─── */
     .chat-sidebar {
         width: 100% !important;
-        min-height: 100vh;
+        height: 100vh;  /* Fixní výška */
+        max-height: 100vh;  /* Maximální výška */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;  /* Zabráníme scroll na sidebaru */
+    }
+    
+    /* Message display musí být scrollovatelný */
+    .message-display {
+        flex: 1;
+        overflow-y: auto;
+        min-height: 0;  /* Důležité pro flex! */
+    }
+    
+    /* Input area vždy viditelný na spodku */
+    .input-area {
+        flex-shrink: 0;  /* Nikdy se nesmí zmenšit */
+        position: relative;
+        z-index: 10;
     }
     
     /* ─── TACTICAL HEADER ─── */
