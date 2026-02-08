@@ -22,13 +22,7 @@
    Ultra kompaktní režim - vertikální orientace
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (max-width: 480px) {
-
-html, body {
-  overflow-y: auto;
-        overflow-y: auto;
-        overflow: auto;   
-}
-   
+    
     /* ─── HLAVNÍ CONTAINER ─── */
     .app-container {
         flex-direction: column;
@@ -40,8 +34,8 @@ html, body {
     /* ─── CHAT SIDEBAR ─── */
     .chat-sidebar {
         width: 100%  ;
-        height: 50vh;  /* Fixní výška */
-        max-height: 50vh;  /* Maximální výška */
+        height: 85vh;  /* Fixní výška */
+        max-height: 85vh;  /* Maximální výška */
         display: flex;
         flex-direction: column;
       
@@ -50,7 +44,7 @@ html, body {
     
     /* Message display musí být scrollovatelný */
     .message-display {
-       height: 60vh;  /* Fixní výška */
+       height: 70vh;  /* Fixní výška */
         
         margin-top: -5px;
          /* Důležité pro flex! */
@@ -77,11 +71,13 @@ html, body {
         font-size: 12px;
         letter-spacing: 0.2em;
         margin-top: -2px;
+        z-index: 10;
     }
     
     .ship-id p {
         font-size: 8px;
         margin-top: -2px;
+        z-index: 10;
     }
     
     .pulse-bar {
@@ -122,7 +118,7 @@ html, body {
     .status-dot {
         width: 6px;
         height: 6px;
-        
+        z-index: 10;
     }
     
     /* ─── CHAT MESSAGES ─── */
@@ -145,53 +141,53 @@ html, body {
     .msg-label {
         font-size: 8px;
         margin-bottom: 6px;
-        margin-top: -15px;
+        
     }
     
     /* ─── FILE PREVIEW ─── */
     .file-preview-multi {
         padding: 0.5rem;
-        margin-top: -15px;
+        
     }
     
     .file-preview-header {
         flex-direction: column;
         gap: 0.5rem;
-        margin-top: -15px;
+         
     }
     
     .file-preview-grid {
         grid-template-columns: 1fr;
         gap: 0.5rem;
-        margin-top: -15px;
+        
     }
     
     .file-card {
         padding: 0.6rem;
-        margin-top: -15px;
+        
     }
     
     .file-card-name {
         font-size: 9px;
-        margin-top: -15px;
+         
     }
     
     .file-card-size {
         font-size: 8px;
-        margin-top: -15px;
+        
     }
     
     /* ─── SHIP STATS ─── */
     .ship-stats {
         height: auto;
-        padding: 0.2rem;
-        gap: 1rem;
+        padding: 0.50rem;
+        gap:  1rem;
         flex-wrap: wrap;
-         
+        z-index: 10; 
     }
     
     .stat-item {
-        font-size: 9px;
+        font-size: 13px;
          
     }
     
@@ -348,6 +344,12 @@ html, body {
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
     
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
+    
     .chat-sidebar {
         width: 100%;
     }
@@ -377,6 +379,7 @@ html, body {
     
     .bubble {
         font-size: 13px;
+        display: none;
     }
     
     .file-preview-grid {
@@ -432,6 +435,12 @@ html, body {
    Střední režim - ideální pro tablety ve vertikální orientaci
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
     
     .app-container.canvas-active .chat-sidebar {
         width: 350px;
@@ -500,6 +509,12 @@ html, body {
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (min-width: 1025px) and (max-width: 1279px) {
     
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
+    
     .app-container.canvas-active .chat-sidebar {
         width: 400px;
     }
@@ -548,6 +563,12 @@ html, body {
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (min-width: 1280px) and (max-width: 1439px) {
     
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
+    
     .app-container.canvas-active .chat-sidebar {
         width: 450px;
     }
@@ -576,6 +597,12 @@ html, body {
    Širokoúhlé monitory - optimalizované zobrazení
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (min-width: 1440px) and (max-width: 1919px) {
+    
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
     
     .app-container.canvas-active .chat-sidebar {
         width: 500px;
@@ -617,6 +644,12 @@ html, body {
    Full HD a 2K monitory - maximální využití prostoru
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (min-width: 1920px) and (max-width: 2559px) {
+    
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
     
     .app-container.canvas-active .chat-sidebar {
         width: 550px;
@@ -756,6 +789,13 @@ html, body {
    Premium zobrazení - maximální detail a prostor
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (min-width: 2560px) {
+    
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
+    
     
     .app-container.canvas-active .chat-sidebar {
         width: 650px;
@@ -965,6 +1005,13 @@ html, body {
 
 /* Landscape módy pro mobilní zařízení */
 @media only screen and (max-height: 600px) and (orientation: landscape) {
+    
+    html, body {
+  overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;   
+}
+    
     .tactical-header {
         height: 60px;
     }
@@ -990,6 +1037,8 @@ html, body {
 /* ─────────────────────────────────────────────────────────────────────────
    🔧 UTILITY TŘÍDY PRO SPECIFICKÉ PŘÍPADY
    ───────────────────────────────────────────────────────────────────────── */
+
+
 
 /* Force mobile layout */
 .force-mobile-layout {
@@ -1059,5 +1108,3 @@ html, body {
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
-
-
