@@ -96,7 +96,7 @@
     /* ─── HEADER CONTROLS ─── */
     .header-controls {
         gap: 0.2rem;  /* Menší mezery mezi tlačítky */
-         
+         margin-top: -5px; 
     }
     
     .btn-iconic {
@@ -1115,5 +1115,6 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
+
 
 
