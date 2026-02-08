@@ -23,7 +23,7 @@
    ───────────────────────────────────────────────────────────────────────── */
 @media only screen and (max-width: 480px) {
     
-     
+    
     
     
     /* ─── HLAVNÍ CONTAINER ─── */
@@ -35,8 +35,8 @@
     /* ─── CHAT SIDEBAR ─── */
     .chat-sidebar {
         width: 100%  ;
-        height: 86vh;  /* Fixní výška */
-        max-height: 86vh;  /* Maximální výška */
+        height: 90vh;  /* Fixní výška */
+        max-height: 90vh;  /* Maximální výška */
         display: flex;
         flex-direction: column;
       
@@ -186,7 +186,7 @@
     /* ─── SHIP STATS ─── */
     .ship-stats {
         height: auto;
-        padding: 0.50rem;
+        padding: 0.90rem;
         gap:  1rem;
         flex-wrap: wrap;
         z-index: 10; 
@@ -1114,4 +1114,3 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
-
