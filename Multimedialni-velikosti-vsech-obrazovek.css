@@ -40,7 +40,7 @@
     
     /* Message display musí být scrollovatelný */
     .message-display {
-       height: 40vh;  /* Fixní výška */
+       height: 70vh;  /* Fixní výška */
         overflow-y: auto;
          /* Důležité pro flex! */
     }
@@ -1021,6 +1021,7 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
+
 
 
 
