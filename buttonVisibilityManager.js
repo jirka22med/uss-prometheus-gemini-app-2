@@ -195,7 +195,12 @@ const BUTTON_CONFIG = {
         essential: false,
         description: 'Zobrazí oblíbené skladby'
     },
-    
+     'nazev-prehravace': {
+        name: '🎵 Název Prěhravače',
+        category: 'Informace Přehravače',
+        essential: true,
+        description: 'Hlavní nadpis přehrávače (STAR TREK: HUDEBNÍ PŘEHRÁVAČ)'
+    },
      'progres-bar-time-part': {
         name: '⏱️ Progress bar + časovač',
         category: 'Informace Přehravače',
@@ -242,6 +247,7 @@ const DEFAULT_VISIBILITY = {
     'prev-button': false,
     'next-button': false,
     'favorites-button': false,
+    'nazev-prehravace': true,
     'progres-bar-time-part': false,
     'trackTitle': false,
 };
