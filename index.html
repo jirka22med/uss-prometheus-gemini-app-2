@@ -49,7 +49,8 @@
                     </button>
                     
                      
-                    <button id="jirik-manual-opener-btn"  >🧾</button>
+                   <!-- <button id="jirik-manual-opener-btn" >🧾</button> -->
+                    <button id="debug-manager-button">🛠️ DIAGNOSTIKA</button>
                     <button id="open-search-btn" class="btn-iconic" title="Tactical Search">SEARCH</button>
                     <select id="model-selector" class="bridge-select">
                         <option value="gemini-3-flash-preview">gemini-3 flash</option>
@@ -59,7 +60,7 @@
             </header>
 
             <div id="chat-messages" class="message-display">
-                <div class="initial-scan">
+                <div class="initial-scan" >
                     [ STATUS: SCANNING SHIP SYSTEMS... ]
                 </div>
             </div>
@@ -73,7 +74,7 @@
                 <div id="file-preview-list" class="file-preview-grid"></div>
             </div>
 
-            <div class="ship-stats">
+            <div class="ship-stats" id="system-info-status">
                 <div  class="status-dot alert-1"></div>
                 <div class="stat-item"><span>CORE:</span> <span id="stat-core" class="emerald">100%</span></div>
                 <div class="status-dot alert-2"></div>
@@ -100,7 +101,7 @@
         <div id="canvas-panel" class="canvas-panel hidden">
             <header class="canvas-header">
                 <div class="canvas-status">
-                    <div class="ping-dot"></div>
+                    <div class="ping-dot" id="canvas-stavova-dioa"></div>
                     <span id="canvas-title">Canvas</span>
                 </div>
                 <div class="canvas-actions">
@@ -110,15 +111,9 @@
                     </div>
                     
                     <div class="action-group">
-                        <button id="edit-canvas-btn" class="btn-action">
-                            <span>✏️</span> UPRAVIT
-                        </button>
-                        <button id="save-canvas-btn" class="btn-action btn-save hidden">
-                            <span>💾</span> ULOŽIT
-                        </button>
-                        <button id="ai-assist-btn" class="btn-action btn-ai">
-                            <span>🤖</span>ASISTENT
-                        </button>
+                        <button id="edit-canvas-btn" class="btn-action">UPRAVIT</button>
+                        <button id="save-canvas-btn" class="btn-action btn-save hidden">ULOŽIT</button>
+                        <button id="ai-assist-btn" class="btn-action btn-ai">ASIS</button>
                     </div>
                     
                     <button id="close-canvas-btn" class="btn-exit">Zavřít</button>
@@ -285,7 +280,19 @@
         </div>
     </div>
 </div>
-
+              <!-- STAR TREK HUDEBNÍ PŘEHRAVAČ KONFIGURACE KOMPATIBILNÍ Z USS-PROMETHEUS -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <!--   <script src="DebugManager.js"></script>  -->  <!-- PROZATÍM OFFLINE -->
+    <script type="module" src="uss-prometheus-Firebase-Functions.js"></script> <!-- ORIGINÁL NAME: audioFirebaseFunctions.js  1 -->
+    <script src="buttonVisibilityFirebase.js"></script>  <!-- POSÍLÁ INFORMACE DO MODULU: uss-prometheus-Firebase-Functions.js 2 -->
+    <script type="module" src="script-.js"></script>  <!-- INCILIZACE ZE STAR TREK HUDEBNÍHO PŘEHRAVAČE PRO MODUL: 1 A 2 -->
+    <script src="buttonVisibilityManager.js" defer></script>  <!-- MANAGER pro Ui tlačítka zobrazovač a skrívač -->
+    <script src="notificationFix.js" defer></script> <!-- notifikační systém -->
+    
+    
+    <!-- USS-PROMETHEUS -->
+    
    <!-- <script src="jirkuv-hlidac.js" async></script> -->
     <script type="module" src="serpapi-search.js"></script>
     <script type="module" src="serpapi-search--vyhledavac-by-vice-admiral-jirik.js"></script> 
@@ -295,6 +302,7 @@
     <script type="module" src="google-cloud-tts.js"></script>
     <script type="module" src="script.js"></script>
     <script type="module" src="devtools-prometheus.js"></script>
-     
+      
+ 
 </body>
 </html>
