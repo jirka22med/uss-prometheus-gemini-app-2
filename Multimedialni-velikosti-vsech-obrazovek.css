@@ -26,6 +26,9 @@
     /* ─── HLAVNÍ CONTAINER ─── */
     .app-container {
         flex-direction: column;
+         overflow-y: auto;
+        overflow-y: auto;
+        overflow: auto;
     }
     
     /* ─── CHAT SIDEBAR ─── */
@@ -35,13 +38,15 @@
         max-height: 100vh;  /* Maximální výška */
         display: flex;
         flex-direction: column;
-       overflow: hidden;  /* Zabráníme scroll na sidebaru */
+      
+         
     }
     
     /* Message display musí být scrollovatelný */
     .message-display {
        height: 70vh;  /* Fixní výška */
-        overflow-y: auto;
+        
+        margin-top: -5px;
          /* Důležité pro flex! */
     }
     
@@ -50,34 +55,39 @@
         flex-shrink: 0;  /* Nikdy se nesmí zmenšit */
         position: relative;
         z-index: 10;
+        margin-top: -10px;
     }
     
     /* ─── TACTICAL HEADER ─── */
     .tactical-header {
         height: auto;
-        padding: 0.75rem;
+        padding: 0.40rem;
         flex-direction: column;
         gap: 0.5rem;
+        margin-top: -5px;
     }
     
     .ship-id h1 {
         font-size: 12px;
         letter-spacing: 0.2em;
+        margin-top: -2px;
     }
     
     .ship-id p {
         font-size: 8px;
+        margin-top: -2px;
     }
     
     .pulse-bar {
         width: 3px;
         height: 25px;
+        margin-top: -12px;
     }
     
     /* ─── HEADER CONTROLS ─── */
     .header-controls {
         gap: 0.2rem;  /* Menší mezery mezi tlačítky */
-         margin-top: -10px;
+         margin-top: -2px;
     }
     
     .btn-iconic {
@@ -1023,3 +1033,12 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
+
+
+
+
+
+
+
+
+
