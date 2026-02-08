@@ -31,7 +31,7 @@
     /* ─── CHAT SIDEBAR ─── */
     .chat-sidebar {
         width: 100%  ;
-        height: 100vh;  /* Fixní výška */
+        height: 70vh;  /* Fixní výška */
         max-height: 100vh;  /* Maximální výška */
         display: flex;
         flex-direction: column;
@@ -1021,5 +1021,6 @@
    ✅ END OF MULTIMEDIA RESPONSIVE CSS
    Více admirále Jiříku - systém připraven na VŠECHNY obrazovky! 🚀
    ═══════════════════════════════════════════════════════════════════════════ */
+
 
 
