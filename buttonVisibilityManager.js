@@ -1,5 +1,5 @@
 const __UItlacitka_START = performance.now();
-const VERSION_BVIS = "121.101.114"; // Verze správy tlačítek
+const VERSION_BVIS = "121.101.115"; // Verze správy tlačítek
 
 /**  
  * 🖖 SPRÁVA VIDITELNOSTI TLAČÍTEK - OPRAVENÁ VERZE 
@@ -213,6 +213,129 @@ const BUTTON_CONFIG = {
         essential: false,
         description: 'Vtéto části se zobrazoví názvi písniček ve Star Trek Hudebním Přehravači'
         },
+    
+    'toggle-playlist-button': {
+        name: '📋 Playlist',
+        category: 'Zobrazení',
+        essential: false,
+        description: 'Zobrazí/skryje playlist'
+    },
+    
+     
+    
+    
+     //system-info-status
+   'dioda 1': {
+    name: 'status-dot alert-1',
+        category: 'system-info-status',
+        essential: false,
+        description: 'animovaná dioda 1s'
+        },  
+    
+    'dioda 2': {
+    name: 'status-dot alert-2',
+        category: 'system-info-status',
+        essential: false,
+        description: 'animovaná dioda 1s'
+        },  
+    
+    'dioda 3': {
+    name: 'status-dot alert-3',
+        category: 'system-info-status',
+        essential: false,
+        description: 'animovaná dioda 1s'
+        },  
+    
+    'dioda 4': {
+    name: 'status-dot alert-4',
+        category: 'system-info-status',
+        essential: false,
+        description: 'animovaná dioda 1s'
+        },  
+    
+    //ship-stats
+    
+    'stat-core': {
+    name: 'Info Jádro',
+        category: 'system-info-status',
+        essential: false,
+        description: ' '
+        },  
+    
+    'stat-shields': {
+    name: 'Info Štít',
+        category: 'system-info-status',
+        essential: false,
+        description: ' '
+        },  
+    
+    'stat-signal': {
+    name: 'Infor Signál',
+        category: 'system-info-status',
+        essential: false,
+        description: ' '
+        },  
+    
+    'SIGNAL': {
+    name: 'Signál text',
+        category: 'system-info-status',
+        essential: false,
+        description: ' '
+        },  
+     'CORE': {
+    name: 'Jádro text',
+        category: 'system-info-status',
+        essential: false,
+        description: ' '
+        },  
+ 'SHIELDS': {
+    name: 'Štíty text',
+        category: 'system-info-status',
+        essential: false,
+        description: ' '
+        },  
+ 
+    
+    
+    //performance-mode
+    
+    'perfMode': {
+    name: 'performance-mode',
+        category: 'system-info-status',
+        essential: false,
+        description: ' '
+        },  
+    
+    
+    //multy kontejner
+    'file-preview-container':{
+    name: 'kontejner pro více souboru',
+        category: 'multy kontejner',
+        essential: false,
+        description: ' '
+        },  
+    
+    'file-count-display':{
+    name: 'ukazatel počtu souborů',
+        category: 'multy kontejner',
+        essential: false,
+        description: ' '
+        },  
+    
+    'clear-all-files-btn':{
+    name: 'tlačítko vymazat vše',
+        category: 'multy kontejner',
+        essential: false,
+        description: ' '
+        }, 
+    
+    'file-preview-list':{
+    name: 'řazení souborů',
+        category: 'multy kontejner',
+        essential: false,
+        description: ' '
+        },
+     
 };
 
 // --- Defaultní viditelnost tlačítek ---
@@ -229,6 +352,10 @@ const DEFAULT_VISIBILITY = {
     'model-selector': true,
     'system-info-status': true,
      
+    
+    
+    
+    
     //canvas-panel
     'canvas-stavova-dioa': true,
     'view-code-btn': true,
@@ -241,7 +368,33 @@ const DEFAULT_VISIBILITY = {
     'canvas-editor': true,
     'canvas-preview': true,
     
+    //system-info-status
+    'dioda 1': true,
+    'dioda 2': true,
+    'dioda 3': true,
+    'dioda 4': true,
     
+    //ship-stats
+    'stat-core': true,
+    'stat-shields': true,
+    'stat-signal': true,
+    'CORE': true,
+    'SHIELDS': true,
+    'SIGNAL': true,
+   
+    //performance-mode
+    'perfMode': true,
+    
+    //multy kontejner
+'file-preview-container': true,
+'file-count-display': true,
+'clear-all-files-btn': true,
+'file-preview-list': true,
+    
+    
+    //Star Trek Hudební Přehravač 
+     
+    'toggle-playlist-button': false,
     'play-button': false,
     'pause-button': false,
     'prev-button': false,
@@ -250,6 +403,10 @@ const DEFAULT_VISIBILITY = {
     'nazev-prehravace': true,
     'progres-bar-time-part': false,
     'trackTitle': false,
+    
+    
+    
+    
 };
  
 
