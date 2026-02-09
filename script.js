@@ -1167,7 +1167,7 @@ window.showFiles = () => {
 
 const startTime = getCurrentTimestamp();
 tacticalLog('SYSTEM', `USS PROMETHEUS v5.9 zkalibrován. ${startTime.full}`);
-appendMessage('system', `Všechny systémy online.\nPřipraven k akci, vice admirále.\n\n📅 ${startTime.date}\n🕐 ${startTime.time}\n🔊 Audio: ${audioPlaybackRate}x rychlost\n📁 Multi-file: ${MAX_FILES} souborů max`);
+appendMessage('system', `Všechny systémy online.\nPřipraven k akci, vice admirále Jiříku.\n\n📅 ${startTime.date}\n🕐 ${startTime.time}\n🔊 Audio: ${audioPlaybackRate}x rychlost\n📁 Multi-file: ${MAX_FILES} souborů max`);
 
 // ✅ OPRAVENO: checkSerpAPIConfig() nyní vrací správný 'configured' property
 const serpConfig = checkSerpAPIConfig();
