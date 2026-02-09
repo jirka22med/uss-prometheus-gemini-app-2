@@ -1,8 +1,9 @@
+        
  
  
 // fleet-registry.js - VELITELSKÝ MOST (Jediný soubor, který upravuješ)
 const FLEET_CONFIG = {
-    version: "0.0.0.0.0.2", // ← Zvýšil jsem o 1 (nový modul přidán)
+    version: "0.0.0.0.0.3", // ← Zvýšil jsem o 1 (nový modul přidán)
     codename: "Prometheus-Class",
     
     // SEZNAM VŠECH MODULŮ (Tady spravuješ odkazy)
@@ -22,22 +23,24 @@ const FLEET_CONFIG = {
         // ---HLAVNÍ CSS VÁNOČNÍ EDICE STAR TREK HUDEBNÍHO PŘEHRAVAČE
         './style-uss-prometheus.css',
         // ---HLAVNÍ CSS NOVÍ PANEL HLASITOST ZE SPRÁVCE ROZHRANÍ .JS
-        
-
-         // --- NULTÉ POŘADÍ V POŘADÍ ---
-        './fleet-register.js',
-        // --- Musí se načíst PŘED všemi Firebase moduly ---
-      'https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js',
-        'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js',  
       
-//STAR TREK HUDEBNÍ PŘEHRAVAČ KONFIGURACE KOMPATIBILNÍ Z USS-PROMETHEUS 
-        './uss-prometheus-Firebase-Functions.js',   
-        './buttonVisibilityFirebase.js',
-        './buttonVisibilityManager.js',
-        './notificationFix.js',
-        './myPlaylist.js',
+  //=========================================================================
+         //STAR TREK HUDEBNÍ PŘEHRAVAČ KONFIGURACE KOMPATIBILNÍ Z USS-PROMETHEUS 
+                             './style-uss-prometheus.css',
+                          // --- NULTÉ POŘADÍ V POŘADÍ ---
+                            './fleet-register.js',
+                 // --- Musí se načíst PŘED všemi Firebase moduly ---
+            'https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js',
+          'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js',  
+                           './uss-prometheus-Firebase-Functions.js',   
+                             './buttonVisibilityFirebase.js',
+                             './buttonVisibilityManager.js',
+                               './notificationFix.js',
+                                 './myPlaylist.js',
+                 //       './universalni-perfomens-monitor.js',
+  //==============================================================================      
         
-        
+  //==============================================================================        
          //USS-PROMETHEUS 
         './serpapi-search.js',
         './serpapi-search--vyhledavac-by-vice-admiral-jirik.js',
@@ -47,6 +50,7 @@ const FLEET_CONFIG = {
         './google-cloud-tts.js',
         './script.js',
         './devtools-prometheus.js',
+//=================================================================================        
     ]           
 };
 
@@ -78,9 +82,13 @@ console.log(
 );
 console.log(
     `%c   Status: Všechny systémy zelené! ✅`,
-    'color: #00FF00; font-size: 12px; font-weight: bold;'
+    'color: #00FF00; font-size: 12px; font-weight: bold;'        
 );
  console.log(
     `%c   Projekt běží na: https://jirka22med.github.io/star-trek-hudebni-prehravac-vylepsen-4-mobilni/! ✅`,
+    'color: #00FF00; font-size: 12px; font-weight: bold;'
+);
+ console.log(
+    `%c   Projekt běží na:  https://jirka22med.github.io/uss-prometheus-gemini-app-2/! ✅`,
     'color: #00FF00; font-size: 12px; font-weight: bold;'
 );
