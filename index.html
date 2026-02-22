@@ -10,7 +10,7 @@
     <link rel="stylesheet" href=" hlasovi-model-moldar.css">
     <link rel="stylesheet" href="Multimedialni-velikosti-vsech-obrazovek.css"> 
     <link rel="stylesheet" href="serpapi-search--vyhledavac-by-vice-admiral-jirik.css">
-  <!--    <link rel="stylesheet" href="style-uss-prometheus.css"> -->
+     <link rel="stylesheet" href="style-uss-prometheus.css"> 
     
     
     <script type="importmap">
@@ -321,7 +321,7 @@
        <script src="DebugManager.js"></script>  -->  <!-- PROZATÍM OFFLINE  
     <script type="module" src="uss-prometheus-Firebase-Functions.js"></script>   ORIGINÁL NAME: audioFirebaseFunctions.js  1  
     <script src="buttonVisibilityFirebase.js"></script>   POSÍLÁ INFORMACE DO MODULU: uss-prometheus-Firebase-Functions.js 2 -->
-    <script type="module" src="script-.js"></script>  <!-- INCILIZACE ZE STAR TREK HUDEBNÍHO PŘEHRAVAČE PRO MODUL: 1 A 2 -->
+   <!-- <script type="module" src="script-.js"></script>  <!-- INCILIZACE ZE STAR TREK HUDEBNÍHO PŘEHRAVAČE PRO MODUL: 1 A 2 -->
   <!--    <script src="buttonVisibilityManager.js" defer></script>  <!-- MANAGER pro Ui tlačítka zobrazovač a skrívač -->
     <!--  <script src="notificationFix.js" defer></script> <!-- notifikační systém -->
   <!--    <script src="myPlaylist.js"></script>
@@ -401,5 +401,55 @@ const __INDEX_HTML_START = performance.now();
  console.log(`%c🚀 [INDEX-HTML] Načteno za ${(performance.now() - __INDEX_HTML_START).toFixed(2)} ms`, 'background: #000; color: #00ff00; font-weight: bold; padding: 2px;');
 })();
 </script>
+
+<script>
+
+const DOM = {
+fullscreenToggle: document.getElementById('fullscreen-toggle'),
+};
+// UI interakce
+    DOM.fullscreenToggle?.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+        DOM.fullscreenToggle?.classList.toggle('active', !!document.fullscreenElement);
+        adjustPlaylistHeight(!!document.fullscreenElement);
+    });
+document.addEventListener('DOMContentLoaded', async () => {
+// Browser Info
+    if(document.getElementById('browser-info')) {
+        document.getElementById('browser-info').textContent = detectBrowser(); // před Star Trek OS v8.0
+    }
+    const status = document.getElementById('browser-status');
+    if(status) {
+        status.style.transform = 'translateX(-300px)';
+        setTimeout(() => status.style.transform = 'translateX(0)', 100);
+    }
+});
+
+
+    
+    // Performance Monitor
+let frameCount = 0;
+let lastFpsUpdate = Date.now();
+function monitorPerformance() {
+    frameCount++;
+    const now = Date.now();
+    if (now - lastFpsUpdate > 5000) {
+        const fps = Math.round((frameCount / 5) * 10) / 10;
+        const perfEl = document.getElementById('perfMode');
+        if (perfEl) perfEl.textContent = '⚡ Stabilita  | ' + fps + ' FPS';
+        frameCount = 0;
+        lastFpsUpdate = now;
+    }
+    requestAnimationFrame(monitorPerformance);
+}
+monitorPerformance();
+</script>        
 </body>
 </html>
