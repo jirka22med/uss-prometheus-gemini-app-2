@@ -10,7 +10,7 @@
     <link rel="stylesheet" href=" hlasovi-model-moldar.css">
     <link rel="stylesheet" href="Multimedialni-velikosti-vsech-obrazovek.css"> 
     <link rel="stylesheet" href="serpapi-search--vyhledavac-by-vice-admiral-jirik.css">
-    <link rel="stylesheet" href="style-uss-prometheus.css">
+  <!--    <link rel="stylesheet" href="style-uss-prometheus.css"> -->
     
     
     <script type="importmap">
@@ -55,10 +55,10 @@
                    <!-- <button id="jirik-manual-opener-btn" >🧾</button> -->
                    <!-- <button id="debug-manager-button">🛠️ DIAGNOSTIKA</button> -->
                     <button id="fullscreen-toggle" title="Celá obrazovka (F)" style="font-size: 5px; border-radius: 0px;"    >⛶</button>
-                     <button id="prev-button" title="Předchozí (Šipka vlevo)" style="font-size: 5px; border-radius: 0px;"  >◀️⬅️</button>
+                  <!--     <button id="prev-button" title="Předchozí (Šipka vlevo)" style="font-size: 5px; border-radius: 0px;"  >◀️⬅️</button>
 <button id="play-button" title="Přehrát (Mezerník/P)" style="font-size: 5px; border-radius: 0px;"   >🚀</button>
 <button id="pause-button" title="Pauza (Mezerník/P)" style="font-size: 5px; border-radius: 0px;" > ⏸️</button>
-<button id="next-button" title="Další (Šipka vpravo)" style="font-size: 5px; border-radius: 0px;" >▶️➡️</button>
+<button id="next-button" title="Další (Šipka vpravo)" style="font-size: 5px; border-radius: 0px;" >▶️➡️</button> -->
                     <button id="open-search-btn" class="btn-iconic" title="Tactical Search">SEARCH</button>
                     <select id="model-selector" class="bridge-select">
                         <option value="gemini-3-flash-preview">gemini-3 flash</option>
@@ -66,9 +66,9 @@
                     </select>
                 </div> 
                 
-                  <audio id="audioPlayer" style="display: none;">
+                <!--    <audio id="audioPlayer" style="display: none;">
     <source id="audioSource" src="" type="audio/mpeg" style="display: none;">
-</audio>
+</audio>   
 
                  
                  
@@ -84,7 +84,7 @@
         <span id="duration" style="display:inline-block;padding:2px;background:#000;border:2px solid #C00000;color:#fff;margin:0;">
           <span class="time-part" style="color: white;">00</span><span class="time-separator" style="color: white;">:</span><span class="time-part" style="color: white;">00</span><span class="time-separator" style="color: white;">:</span><span class="time-part" style="color: white;">00</span>
         </span>
-      </div>
+      </div>  -->
             </header>
    
 
@@ -112,7 +112,7 @@
                 <div class="status-dot alert-3" id="dioda 3"></div>
                 <div class="stat-item" id="SIGNAL"><span>SIGNAL:</span> <span id="stat-signal" class="amber">OPTIMAL</span></div>
                 <div class="status-dot alert-4" id="dioda 4"></div>
-                <h2 id="trackTitle" style="display: none; font-size: 12px;" >Vyberte skladbu</h2>
+               <!--   <h2 id="trackTitle" style="display: none; font-size: 12px;" >Vyberte skladbu</h2> -->
             </div>
                                                     
             
@@ -316,15 +316,15 @@
       <!-- STAR TREK HUDEBNÍ PŘEHRAVAČ KONFIGURACE KOMPATIBILNÍ Z USS-PROMETHEUS -->
               <script src="fleet-register.js"></script>
              
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+   <!--   <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
-    <!--   <script src="DebugManager.js"></script>  -->  <!-- PROZATÍM OFFLINE -->
-    <script type="module" src="uss-prometheus-Firebase-Functions.js"></script> <!-- ORIGINÁL NAME: audioFirebaseFunctions.js  1 -->
-    <script src="buttonVisibilityFirebase.js"></script>  <!-- POSÍLÁ INFORMACE DO MODULU: uss-prometheus-Firebase-Functions.js 2 -->
+       <script src="DebugManager.js"></script>  -->  <!-- PROZATÍM OFFLINE  
+    <script type="module" src="uss-prometheus-Firebase-Functions.js"></script>   ORIGINÁL NAME: audioFirebaseFunctions.js  1  
+    <script src="buttonVisibilityFirebase.js"></script>   POSÍLÁ INFORMACE DO MODULU: uss-prometheus-Firebase-Functions.js 2 -->
     <script type="module" src="script-.js"></script>  <!-- INCILIZACE ZE STAR TREK HUDEBNÍHO PŘEHRAVAČE PRO MODUL: 1 A 2 -->
-    <script src="buttonVisibilityManager.js" defer></script>  <!-- MANAGER pro Ui tlačítka zobrazovač a skrívač -->
-    <script src="notificationFix.js" defer></script> <!-- notifikační systém -->
-    <script src="myPlaylist.js"></script>
+  <!--    <script src="buttonVisibilityManager.js" defer></script>  <!-- MANAGER pro Ui tlačítka zobrazovač a skrívač -->
+    <!--  <script src="notificationFix.js" defer></script> <!-- notifikační systém -->
+  <!--    <script src="myPlaylist.js"></script>
   <!--  <script src="universalni-perfomens-monitor.js"></script>  <!-- doplněn před 2 minutama -->
     
     <!-- USS-PROMETHEUS -->
