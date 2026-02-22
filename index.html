@@ -369,7 +369,8 @@ const __INDEX_HTML_START = performance.now();
 </script>
 
 <script>
-
+ 
+    
 const DOM = {
  
     
@@ -391,6 +392,31 @@ if (DOM.syncStatus) setTimeout(() => DOM.syncStatus.style.display = 'none', 6000
         DOM.fullscreenToggle?.classList.toggle('active', !!document.fullscreenElement);
         adjustPlaylistHeight(!!document.fullscreenElement);
     });
+
+// ── Chybějící článek z scrollbar.js ──
+const browser = {
+    isChrome: /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
+    isEdge: /Edg/.test(navigator.userAgent),
+    isBrave: navigator.brave !== undefined,
+    isOpera: /OPR|Opera/.test(navigator.userAgent),
+    isOperaGX: /OPRGX/.test(navigator.userAgent),
+    isSafari: /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent),
+    isFirefox: /Firefox/.test(navigator.userAgent),
+    isIE: /Trident/.test(navigator.userAgent)
+};
+
+function detectBrowser() {
+    if (browser.isOperaGX) return 'Opera GX';
+    if (browser.isOpera) return 'Opera';
+    if (browser.isBrave) return 'Brave';
+    if (browser.isEdge) return 'Edge';
+    if (browser.isChrome) return 'Chrome';
+    if (browser.isSafari) return 'Safari';
+    if (browser.isFirefox) return 'Firefox';
+    if (browser.isIE) return 'Internet Explorer';
+    return 'Neznámý prohlížeč';
+}
+    
 document.addEventListener('DOMContentLoaded', async () => {
 // Browser Info
     if(document.getElementById('browser-info')) {
