@@ -371,11 +371,13 @@ const __INDEX_HTML_START = performance.now();
 <script>
 
 const DOM = {
-// --- Inicializace systému ---
-if (DOM.syncStatus) setTimeout(() => DOM.syncStatus.style.display = 'none', 6000);
+ 
     
 fullscreenToggle: document.getElementById('fullscreen-toggle'),
 };
+
+    // --- Inicializace systému ---
+if (DOM.syncStatus) setTimeout(() => DOM.syncStatus.style.display = 'none', 6000);
 // UI interakce
     DOM.fullscreenToggle?.addEventListener('click', () => {
         if (!document.fullscreenElement) {
