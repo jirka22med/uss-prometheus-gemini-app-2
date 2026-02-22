@@ -371,6 +371,9 @@ const __INDEX_HTML_START = performance.now();
 <script>
 
 const DOM = {
+// --- Inicializace systému ---
+if (DOM.syncStatus) setTimeout(() => DOM.syncStatus.style.display = 'none', 6000);
+    
 fullscreenToggle: document.getElementById('fullscreen-toggle'),
 };
 // UI interakce
