@@ -9,34 +9,18 @@
  * 🛡️ PROXY MASKOVACÍ MATRICE (Kopie z hlavního modulu)
  * Použití stejných proxy jako v serpapi-search.js
  */
+const OWN_WORKER_URL = 'https://silent-queen-2d4a.jirmedokura.workers.dev';
+
 const TACTICAL_PROXY_GRID = [
-    // ✅ ID:2 - CODETABS (OSVĚDČENÝ)
+    // ✅ ID:12 - VLASTNÍ WORKER (klíč jde jen k tobě)
     {
-        id: 2,
-        name: "CODETABS_RESCUE",
-        endpoint: (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+        id: 12,
+        name: "PROMETHEUS_OWN_WORKER",
+        endpoint: (url) => `${OWN_WORKER_URL}/?${new URL(url).searchParams.toString()}`,
         strategy: "DIRECT_GET",
-        description: "OSVĚDČENÝ VÍTĚZ: Záložní uzel s nízkou latencí pro GitHub Pages."
+        description: "Vlastní Cloudflare Worker s ověřením Origin."
     },
-    
-    // ✅ ID:3 - CORSPROXY.IO
-    {
-        id: 3,
-        name: "CORSPROXY_IO_SHIELD",
-        endpoint: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
-        strategy: "DIRECT_GET",
-        description: "Robustní uzel pro těžké datové přenosy."
-    },
-    
-    // ✅ ID:4 - THINGPROXY
-    {
-        id: 4,
-        name: "THINGPROXY_ALPHA",
-        endpoint: (url) => `https://thingproxy.freeboard.io/fetch/${url}`,
-        strategy: "DIRECT_GET",
-        description: "Alternativní uzel pro API bypass."
-    },
-    
+
     // ✅ ID:7 - LOCALHOST
     {
         id: 7,
@@ -44,33 +28,6 @@ const TACTICAL_PROXY_GRID = [
         endpoint: (url) => `http://localhost:7778/proxy?url=${encodeURIComponent(url)}`,
         strategy: "DIRECT_GET",
         description: "LOKÁLNÍ PŘÍSTAV: Interní Python tunel na tvém Windows serveru."
-    },
-    
-    // ✅ ID:8 - CLOUDFLARE BYPASS
-    {
-        id: 8,
-        name: "CLOUDFLARE_BYPASS_1",
-        endpoint: (url) => `https://proxy-server.libyzidi.workers.dev/?url=${encodeURIComponent(url)}`,
-        strategy: "DIRECT_GET",
-        description: "Vlastní Cloudflare brána."
-    },
-    
-    // ✅ ID:1 - ALLORIGINS JSON WRAPPER
-    {
-        id: 1,
-        name: "ALLORIGINS_BYPASS",
-        endpoint: (url) => `https://api.allorigins.win/get?disableCache=true&url=${encodeURIComponent(url)}`,
-        strategy: "JSON_WRAPPER",
-        description: "Hybridní uzel pro obcházení GitHub Pages 403 blokace."
-    },
-    
-    // ✅ ID:11 - ALLORIGINS RAW
-    {
-        id: 11,
-        name: "OPEN_PROXY_SPACE",
-        endpoint: (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-        strategy: "DIRECT_RAW",
-        description: "Raw přístup skrze AllOrigins."
     }
 ];
 
@@ -372,4 +329,4 @@ export function openSearchPanel() {
 // 🚀 MODULE LOADED
 // ═══════════════════════════════════════════════════════════════
 console.log('%c✅ [MODULE] serpapi-search--vyhledavac-by-vice-admiral-jirik.js v2.0 LOADED', 'color: #10b981; font-weight: bold;');
-console.log('%c🛡️ PROXY MASKING PROTOCOL: 7 aktivních uzlů připraveno', 'color: #6366f1;');
+console.log(`%c🛡️ PROXY MASKING PROTOCOL: ${TACTICAL_PROXY_GRID.length} uzly připraveny`, 'color: #6366f1;');
