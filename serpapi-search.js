@@ -39,68 +39,28 @@ export { openSearchPanel };
  * 🛰️ TAKTICKÁ PROXY MATRICE [OPTIMALIZOVANÁ VERZE 4.3 - OPRAVENO]
  * AKTIVOVÁNO VÍCE UZLŮ PRO MAXIMÁLNÍ REDUNDANCI
  */
+const OWN_WORKER_URL = 'https://silent-queen-2d4a.jirmedokura.workers.dev';
+
 const TACTICAL_PROXY_GRID = [
-    // ✅ ID:2 - CODETABS (OSVĚDČENÝ)
+    // ✅ ID:12 - VLASTNÍ WORKER (klíč jde jen k tobě)
     {
-        id: 2,
-        name: "CODETABS_RESCUE",
-        endpoint: (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+        id: 12,
+        name: "PROMETHEUS_OWN_WORKER",
+        endpoint: (url) => {
+            const t = new URL(url);
+            return `${OWN_WORKER_URL}/?q=${encodeURIComponent(t.searchParams.get('q'))}&num=${encodeURIComponent(t.searchParams.get('num') || '5')}&api_key=${encodeURIComponent(t.searchParams.get('api_key'))}`;
+        },
         strategy: "DIRECT_GET",
-        description: "OSVĚDČENÝ VÍTĚZ: Záložní uzel s nízkou latencí pro GitHub Pages."
+        description: "Vlastní Cloudflare Worker s ověřením Origin."
     },
-    
-    // ✅ ID:3 - CORSPROXY.IO (REAKTIVOVÁNO)
-    {
-        id: 3,
-        name: "CORSPROXY_IO_SHIELD",
-        endpoint: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
-        strategy: "DIRECT_GET",
-        description: "Robustní uzel pro těžké datové přenosy."
-    },
-    
-    // ✅ ID:4 - THINGPROXY (REAKTIVOVÁNO)
-    {
-        id: 4,
-        name: "THINGPROXY_ALPHA",
-        endpoint: (url) => `https://thingproxy.freeboard.io/fetch/${url}`,
-        strategy: "DIRECT_GET",
-        description: "Alternativní uzel pro API bypass."
-    },
-    
-    // ✅ ID:7 - LOCALHOST (FUNGUJE!)
+
+    // ✅ ID:7 - LOCALHOST
     {
         id: 7,
         name: "LOCAL_TUNNEL_7778",
         endpoint: (url) => `http://localhost:7778/proxy?url=${encodeURIComponent(url)}`,
         strategy: "DIRECT_GET",
         description: "LOKÁLNÍ PŘÍSTAV: Interní Python tunel na tvém Windows serveru."
-    },
-    
-    // ✅ ID:8 - CLOUDFLARE BYPASS 1 (REAKTIVOVÁNO)
-    {
-        id: 8,
-        name: "CLOUDFLARE_BYPASS_1",
-        endpoint: (url) => `https://proxy-server.libyzidi.workers.dev/?url=${encodeURIComponent(url)}`,
-        strategy: "DIRECT_GET",
-        description: "Vlastní Cloudflare brána."
-    },
-    
-    // ✅ ID:1 - ALLORIGINS (REAKTIVOVÁNO S LEPŠÍM HANDLINGEM)
-    {
-        id: 1,
-        name: "ALLORIGINS_BYPASS",
-        endpoint: (url) => `https://api.allorigins.win/get?disableCache=true&url=${encodeURIComponent(url)}`,
-        strategy: "JSON_WRAPPER",
-        description: "Hybridní uzel pro obcházení GitHub Pages 403 blokace."
-    },
-    
-    // ✅ ID:11 - ALLORIGINS RAW (NOVÝ)
-    {
-        id: 11,
-        name: "OPEN_PROXY_SPACE",
-        endpoint: (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-        strategy: "DIRECT_RAW",
-        description: "Raw přístup skrze AllOrigins."
     }
 ];
 
@@ -225,7 +185,7 @@ export async function searchSerpAPI(query, numResults = 5) {
 
             if (!response.ok) {
                 console.warn(`%c❌ [UZEL ${node.name}] Odražen (Status: ${response.status}).`, 'color: #ef4444;');
-                continue; 
+                throw new Error(`HTTP ${response.status} z uzlu ${node.name}`);
             }
 
             const rawData = await response.json();
@@ -386,7 +346,7 @@ export function checkSerpAPIConfig() {
         configured: key && key.length > 20 ? true : false,
         sector: isGitHub ? "GITHUB_PAGES (Hostile Environment)" : "LOCALHOST (Safe Harbor)",
         active_proxies: TACTICAL_PROXY_GRID.filter(node => node !== undefined).length,
-        redundancy_level: "MAXIMÁLNÍ - 7 UZLŮ",
+        redundancy_level: `${TACTICAL_PROXY_GRID.length} uzly`,
         last_operation: NODE_STATS.node_history.length > 0 ? NODE_STATS.node_history[NODE_STATS.node_history.length - 1] : "None",
         performance_metrics: {
             total: NODE_STATS.total_requests,
@@ -412,7 +372,7 @@ export async function testSerpAPI() {
         console.log(formatSerpAPIResults(results));
     } catch (e) {
         console.error('%c❌ [VÝSLEDEK TESTU] Totální selhání systémů:', 'color: #ef4444; font-weight: bold;', e.message);
-        console.log('%c[DOPORUČENÍ] Vice admirále, zkontroluj:\n1. SerpAPI klíč v localStorage\n2. Připojení k internetu\n3. Běžící Python proxy server (localhost:9785)\n4. Firewall nastavení', 'color: #6366f1;');
+        console.log('%c[DOPORUČENÍ] Vice admirále, zkontroluj:\n1. SerpAPI klíč v localStorage\n2. Připojení k internetu\n3. Cloudflare Worker (URL a ALLOWED_ORIGINS) a Python proxy (localhost:7778)\n4. Firewall nastavení', 'color: #6366f1;');
     }
 }
 // ═══════════════════════════════════════════════════════════════════════════════════════════════════
