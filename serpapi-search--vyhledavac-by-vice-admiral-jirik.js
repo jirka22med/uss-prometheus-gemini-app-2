@@ -9,7 +9,7 @@
  * 🛡️ PROXY MASKOVACÍ MATRICE (Kopie z hlavního modulu)
  * Použití stejných proxy jako v serpapi-search.js
  */
-const OWN_WORKER_URL = 'https://silent-queen-2d4a.jirmedokura.workers.dev';
+const OWN_WORKER_URL = 'https://silent-queen-2d4a.jirmedokura.workers.dev/';
 
 const TACTICAL_PROXY_GRID = [
     // ✅ ID:12 - VLASTNÍ WORKER (klíč jde jen k tobě)
